@@ -142,7 +142,7 @@ header {
  }
  
 header img{
-    margin-top: 17px;
+    margin-top: 6px;
     margin-left: 47.5%;
     width: 5%;
 }
@@ -211,9 +211,9 @@ header img{
   }
 
   header img {
-    margin-top: 2.5%;
+    margin-top: 1px;
     margin-left: 42%;
-    width: 16%;
+    width: 15%;
   }
 
 }
