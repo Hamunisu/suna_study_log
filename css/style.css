@@ -188,6 +188,10 @@ header img{
       font-size: 100%;
   }
 
+  .code-box pre code {
+  font-size: 12px;
+}
+
   .title  p{
       margin-top: 40px;
       margin-left: 5%;
@@ -207,9 +211,9 @@ header img{
   }
 
   header img {
-    margin-top: 2.2%;
+    margin-top: 2.5%;
     margin-left: 42%;
-    width: 17%;
+    width: 16%;
   }
 
 }
