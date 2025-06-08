@@ -1,0 +1,215 @@
+ @charset "UTF-8";
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+    font-size: 100%;
+    scroll-behavior: smooth;
+}
+
+body {
+  background-color: rgb(255, 241, 217);
+}
+
+@font-face {
+  font-family: 'HonokaMincho'; /* 任意の名前 */
+  src: url('../font/Honoka_Shin_Mincho_L.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+.japanese {
+  font-family: 'HonokaMincho', serif;
+}
+
+.english {
+    font-family: "Lora", serif;
+    font-optical-sizing: auto;
+}
+
+.content {
+    display: flex;
+    width: 100%;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+}
+
+.all {
+    width: 80%;
+    height: auto;
+    margin-bottom: 200px;
+}
+
+.top {
+    display: flex;
+    width: 100%;
+    left: 0;
+    height: 20%;
+    background-color: #2d2d2d;
+    justify-content: center;  /* 横方向中央寄せ */
+    align-items: center;
+}
+
+.top h1 {
+    padding-top: 15px;
+    font-size: 475%;
+    text-align: center;
+    color: white;
+}
+
+.top h2 {
+    padding-top: 45px;
+    padding-left: 2%;
+    font-size: 350%;
+    text-align: center;
+    color: #ccc;
+}
+
+
+.title  p{
+    margin-top: 40px;
+    margin-left: 10%;
+    font-size: 25px;
+}
+
+.main p {
+    margin-left: 15%;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    font-size: 20px;
+}
+
+.code-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+pre {
+    position: relative;
+    width: 80%;
+    overflow-x: auto;
+    background-color: #2d2d2d;
+    padding: 1em;
+    border-radius: 8px;
+}
+
+.copy-button {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  padding: 4px 8px;
+  font-size: 12px;
+  cursor: pointer;
+  background-color: #444;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  opacity: 0.8;
+  transition: opacity 0.3s;
+}
+
+.copy-button:hover {
+  opacity: 1;
+}
+
+/* 最下部固定 */
+footer {
+    width: 100%;
+    height: auto;
+    padding-top: 45px;
+    text-align: center;
+    border-top:  solid 2px #ccc;
+    font-size: 25px;
+}
+
+header {
+    position: fixed;
+    width: 100%;
+    height: 12%;
+    bottom: 0;
+    left: 0;
+    background-color: #2d2d2d;
+    border-top: solid 5px gray;
+    z-index: 3;
+ }
+ 
+header img{
+    margin-top: 17px;
+    margin-left: 47.5%;
+    width: 5%;
+}
+
+/* windows &tablet */
+@media (max-width: 1300px) and (min-width: 600px) {
+
+    header {
+    display: flex;
+    height: 10%;
+  }
+  
+  header img {
+    /* margin-top: 2%; */
+    margin-left: 80%;
+    width: 11%;
+  }
+}
+
+/* スマホモード */
+@media (max-width: 600px) {
+  html, body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .top {
+    display: flex;
+    width: 100%;
+    left: 0;
+    height: 15%;
+  }
+
+  .top h1 {
+      font-size: 200%;
+  }
+
+  .top h2 {
+      padding-top: 23px;
+      font-size: 100%;
+  }
+
+  .title  p{
+      margin-top: 40px;
+      margin-left: 5%;
+      font-size: 20px;
+  }
+
+  .main p {
+      margin-left: 10%;
+      margin-top: 10px;
+      margin-bottom: 40px;
+      font-size: 15px;
+  }
+
+  header {
+    display: flex;
+    height: 10%;
+  }
+
+  header img {
+    margin-top: 2.2%;
+    margin-left: 42%;
+    width: 17%;
+  }
+
+}
