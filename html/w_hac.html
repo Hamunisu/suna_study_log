@@ -47,9 +47,9 @@
         <div class="main_box">
             
             <p class="date">2025/06/09</p>
-                <p class="title">～用語集　1-1～</p>
+                <p class="title">～1-1　用語集～</p>
 
-            <!-- 内容 -->
+<!-- 内容 -->
             <div class="info">
                 <p class="ore_text">ホワイトハッカー</p>
                     <p>攻撃者の視点　手法に精通し、セキュリティに活用する人
@@ -60,7 +60,7 @@
             <div class="info">
                 <p class="ore_text">情報セキュリティの定義</p>
                     <p>情報の機密性、完全性、可用性を維持すること
-                        <br>関連：CIA要件
+                        <br><span class="plus">関連：CIA要件</span>
                     </p>
             </div>
 
@@ -94,13 +94,150 @@
                     </p>
             </div>
 
+<!-- ２章 １-->
+            <p class="title">～2-1　ハッキングフロー～</p>
+                <p class="sub">あくまで基本的な行動でありすべてのクラッカーの手順ではない
+                    <br><span class="plus">例：Dos　webアプリケーション</span>
+                </p>
+
+            <div class="info">
+                <p class="ore_text">偵察</p>
+                    <p>合法　企業から出ている情報を集める
+                        <br><span class="plus">情報：ドメイン名　IPアドレス DNS　SNS　求人</span>
+                    </p>
+            </div>
+
+            <div class="info">
+                <p class="ore_text">スキャニング</p>
+                    <p>グレー　対象に直接アクセスしサーバーの情報を集める
+                    </p>
+            </div>
+
+            <div class="info">
+                <p class="ore_text">列挙</p>
+                    <p>合法　上記で集めた情報をまとめること
+                    </p>
+            </div>
+
+            <div class="info">
+                <p class="ore_text">アクセス権の取得</p>
+                    <p>違法　脆弱性を見つけ、対象システムへ攻撃、侵入すること
+                    </p>
+            </div>
+
+            <div class="info">
+                <p class="ore_text">権限昇格</p>
+                    <p>違法　管理者権限を奪うこと
+                    </p>
+            </div>
+
+            <div class="info">
+                <p class="ore_text">アクセスの維持</p>
+                    <p>違法　バックドアの作成、マルウェアのインストール
+                    </p>
+            </div>
+
+            <div class="info">
+                <p class="ore_text">痕跡の削除</p>
+                    <p>違法　バックドアを隠す、ログ操作　消去
+                    </p>
+            </div>
+
+            <div class="info">
+                <p class="ore_text">攻撃特定性</p>
+                    <p>特定の攻撃対象にこだわるかの指標
+                        <br><span class="plus">例：インサイダー（内部犯罪）：高い</span>
+                    </p>
+            </div>
+
+            <div class="info">
+                <p class="ore_text">サイバーキルチェーン</p>
+                    <p>クラッキングフローを完成させないために心理を読み取り対策すること
+                    </p>
+            </div>
+
+            <div class="info">
+                <p class="ore_text">ソーシャルエンジニアリング</p>
+                    <p>心理を利用し情報等を盗む手段（PCではなく人間を利用）
+                        <br><span class="plus">例；なりすまし　フィシング　ショルダーハック　ダンプスターダイビング</span>
+                    </p>
+            </div>
+
+            <div class="info">
+                <p class="ore_text">マルウェア</p>
+                    <p>PCやネットワークにダメージを与えるソフトのこと（正式名称：マリシャスウェア）
+                        <br><span class="plus">例：ウイルス　トロイの木馬　スパイウェア　ランサムウェア
+                            <br>トロイの木馬：無害なアプリに見せてキーロガー（入力を記録する）システムが入っているもの
+                            <br>ランサムウェア：ダウンロードファイルなどに入っているバックグラウンドで暗号化や拡張子書き換えを行い、復旧に金銭を要求するもの
+                        </span>
+                    </p>
+            </div>
+
+            <div class="info">
+                <p class="red_text">※注意</p>
+                    <p>ソーシャルエンジニアリング＋マルウェアが最強である
+                        <span class="plus">内部の人間を利用しシステム破壊されると防ぎようがない（正式にアクセス権があるのが強い点）</span>
+                    </p>
+            </div>
+
+
+<!-- ２章 ２-->
+            <p class="title">～2-2　偽造工作～</p>
+                <p class="sub">スプーフィングについて
+                </p>
+
+            <div class="info">
+                <p class="ore_text">IPスプーフィング</p>
+                    <p>クラッカーが攻撃元を隠すために行う
+                        <span class="plus">利用例：おとりとして多数のIPから対象にアクセスする　踏み台として使う（クラッカー-IP-IP-対象）
+                            <br>踏み台のデメリット：返答があった場合偽のIPに送られるためクラッカーは受け取れない
+                        </span>
+                    </p>
+            </div>
+
+            <div class="info">
+                <p class="ore_text">Macアドレス</p>
+                    <p>NIC（Network Internet Card）につけられた固有のものである
+                        <span class="plus">言い換え：物理アドレス
+                            <br>例：BAN（ゲーム会社がこのアドレスからのアクセスを切る）
+                        </span>
+                    </p>
+            </div>
+
+            <div class="info">
+                <p class="ore_text">Macアドレススプーフィング</p>
+                    <p>MACアドレスをコマンドやパケットで偽造すること
+                        <span class="plus">例：コマンドー自信のPCのMACアドレスを書き換える
+                            <br>パケットー送信元＆送信先を書き換える
+                        </span>
+                    </p>
+            </div>
+
+            <div class="info">
+                <p class="ore_text">DHCPスタベーション（枯渇）攻撃</p>
+                    <p>DHCPサーバーはMACアドレスとIPを結び付けてネットに接続する時の動作を利用しMACアドレススプーフィングを行いIPアドレスを減らす
+                        <span class="plus">目的：リースプールを枯渇させる事で社員でネットに接するできないようにする
+                            <br>利点：ネットワークサービスを停止させれる　低コスト　広範囲に影響する（ネットワーク全体）　MACアドレススプーフィングでばれにくい
+                                <br>対策：MACアドレスフィルタリングを使用し社内のMACアドレスのみを登録しておくことでその他のMACアドレスを防ぐ
+                        </span>
+                    </p>
+            </div>
+
+
+
+
+
+
+
+
+
 
 
 
 
 
             <footer>
-                <p class="english">&copy; 2025 Suna_Rust.</p>
+                <p class="english">&copy; Sunamayu.</p>
             </footer>
         </div>
     </div>

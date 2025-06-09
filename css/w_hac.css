@@ -45,6 +45,17 @@
     font-size: 40px;
 }
 
+.sub {
+    text-align: center;
+    font-size: 19px;
+    margin-bottom: 10px;
+    border:  solid #212d5d;
+    border-radius: 25px;
+    padding: 20px 25px;
+}
+
+
+
 /* 本文 */
 .info {
     display: block; /* ブロック表示で縦積み */
@@ -62,6 +73,23 @@
 .info p.ore_text {
     color: orange;
     font-size: 40px;
+}
+
+.info p.red_text {
+    color: red;
+    font-size: 40px;
+}
+
+.info .plus {
+    font-size: 19px;
+    display: block;
+    font-size: 18px;
+    text-align: center;
+
+    border-top: 1px dashed #2d2d2d; /* 上に点線 */
+    width: 80%;                     /* 幅指定（任意で調整） */
+    margin: 10px auto 0;            /* 上に余白＋中央寄せ */
+    padding-top: 5px;  
 }
 
 .ore_line{
@@ -100,12 +128,27 @@
         text-align: center;
     }
 
+    
+    .sub {
+        font-size: 17px;
+        margin-bottom: 10px;
+        padding: 10px 30px;
+    }
+
     .info p{
         font-size: 20px;
     }
 
     .info p.ore_text {
         font-size: 25px;
+    }
+    
+    .info p.red_text {
+        font-size: 25px;
+    }
+
+    .info .plus {
+        font-size: 13px;
     }
 
     .ore_line{
