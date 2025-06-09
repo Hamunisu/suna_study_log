@@ -1,0 +1,111 @@
+@charset "UTF-8";
+
+body {
+  background-color: rgb(255, 241, 217);
+}
+
+.content {
+    display: flex;
+    width: 100%;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+}
+
+.all {
+    width: 80%;
+    height: auto;
+    margin-bottom: 200px;
+}
+
+.top h1 {
+    padding-top: 15px;
+    font-size: 475%;
+    text-align: center;
+    color: white;
+}
+
+.top h2 {
+    padding-top: 45px;
+    padding-left: 2%;
+    font-size: 350%;
+    text-align: center;
+    color: #ccc;
+}
+
+.title  p{
+    margin-top: 40px;
+    margin-left: 10%;
+    font-size: 25px;
+}
+
+.main p {
+    margin-left: 15%;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    font-size: 20px;
+}
+
+.code-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+pre {
+    position: relative;
+    width: 80%;
+    overflow-x: auto;
+    background-color: #2d2d2d;
+    padding: 1em;
+    border-radius: 8px;
+}
+
+.copy-button {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  padding: 4px 8px;
+  font-size: 12px;
+  cursor: pointer;
+  background-color: #444;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  opacity: 0.8;
+  transition: opacity 0.3s;
+}
+
+.copy-button:hover {
+  opacity: 1;
+}
+
+
+@media (max-width: 600px) {
+    .all {
+        margin-bottom: 30%;
+    }
+
+    .top h1 {
+        font-size: 200%;
+    }
+
+    .top h2 {
+        padding-top: 23px;
+        font-size: 100%;
+    }
+
+    .title  p{
+        margin-top: 40px;
+        margin-left: 5%;
+        font-size: 20px;
+    }
+
+    .main p {
+        margin-left: 10%;
+        margin-top: 10px;
+        margin-bottom: 40px;
+        font-size: 15px;
+    }
+}

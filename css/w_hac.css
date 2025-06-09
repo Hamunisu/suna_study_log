@@ -1,0 +1,114 @@
+ @charset "UTF-8";
+
+ body {
+  background-color: #fff;
+}
+
+.top h1 {
+    padding-top: 30px;
+    font-size: 425%;
+    text-align: center;
+    color: white;
+}
+
+.top h2 {
+    padding-top: 50px;
+    padding-left: 2%;
+    font-size: 300%;
+    text-align: center;
+    color: #ccc;
+}
+
+.main_container {
+    display: flex;
+    width: 100%;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+}
+
+.main_box {
+    width: 65%;
+    height: auto;
+    margin-bottom: 210px;
+}
+
+.date {
+    margin: 40px 0;
+    font-size: 30px;
+    text-align: center;
+}
+
+.title {
+    margin-bottom: 45px;
+    text-align: center;
+    font-size: 40px;
+}
+
+/* 本文 */
+.info {
+    display: block; /* ブロック表示で縦積み */
+    font-size: 30px;
+    padding: 20px 0;
+    text-align: center;
+    border-bottom: solid 2px #2d2d2d;
+}
+
+.info p{
+    font-size: 27px;
+    padding: 20px 0;
+}
+
+.info p.ore_text {
+    color: orange;
+    font-size: 40px;
+}
+
+.ore_line{
+    text-decoration: underline solid 2.5px orange;
+}
+
+
+@media (max-width: 600px) {
+    .all {
+        margin-bottom: 30%;
+    }
+
+    .top h1 {
+        font-size: 120%;
+    }
+
+    .top h2 {
+        padding-top: 36px;
+        font-size: 85%;
+    }
+
+    .main_box {
+        width: 80%;
+        height: auto;
+        margin-bottom: 100px;
+    }
+    
+    .date {
+        margin: 40px 0;
+        font-size: 30px;
+        text-align: center;
+    }
+
+    .title {
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    .info p{
+        font-size: 20px;
+    }
+
+    .info p.ore_text {
+        font-size: 25px;
+    }
+
+    .ore_line{
+        text-decoration: underline solid 2.5px orange;
+    }
+}
