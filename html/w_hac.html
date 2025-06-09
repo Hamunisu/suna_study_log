@@ -14,8 +14,8 @@
 
     <!-- CSS -->
     <link rel="stylesheet" href="https://unpkg.com/ress@5.0.2/dist/ress.min.css">
-    <link rel="stylesheet" href="../css/style.css?v=1.0.4">
-    <link rel="stylesheet" href="../css/w_hac.css?v=1.0.4">
+    <link rel="stylesheet" href="../css/style.css?v=1.0.5">
+    <link rel="stylesheet" href="../css/w_hac.css?v=1.0.5">
 
     <!-- ファビコン -->
     <link rel="icon" type="image/png" href="../image/w_favicon/favicon-96x96.png" sizes="96x96" />
@@ -215,15 +215,84 @@
 
             <div class="info">
                 <p class="ore_text">DHCPスタベーション（枯渇）攻撃</p>
-                    <p>DHCPサーバーはMACアドレスとIPを結び付けてネットに接続する時の動作を利用しMACアドレススプーフィングを行いIPアドレスを減らす
-                        <span class="plus">目的：リースプールを枯渇させる事で社員でネットに接するできないようにする
+                    <p>DHCPサーバーのMACアドレスとIPを結び付けてネットに接続する時の動作を利用しMACアドレススプーフィングを行いIPアドレスを減らす
+                        <span class="plus">目的：リースプールを枯渇させる事で社員がネットに接続できないようにする
                             <br><br>利点：ネットワークサービスを停止させれる　低コスト　広範囲に影響する（ネットワーク全体）　MACアドレススプーフィングでばれにくい
                                 <br><br>対策：MACアドレスフィルタリングを使用し社内のMACアドレスのみを登録しておくことでその他のMACアドレスを防ぐ
                         </span>
                     </p>
             </div>
+            
+            <div class="info">
+                <p class="ore_text">ARP（Address Resolusotion Protocol）</p>
+                    <p>通信を行う前に接続先のMACアドレスを確認するためのルール
+                        <span class="plus">例：”このIPアドレスは誰？”ー”そのIPは私です”
+                            <br>この内容をARPキャッシュテーブルに保存する
+                            <br><br>ARPキャッシュテーブル：Windowsなら10分、MACなら20分でリセットされる
+                                <br>リセットの仕組み：TTLが切れるとキャッシュリセットされる仕組み（IPのTTLとは別）
+                        </span>
+                    </p>
+            </div>
 
+            <div class="info">
+                <p class="ore_text">ARPキャッシュポイズニング攻撃</p>
+                    <p>ARPキャッシュテーブルのリセット時に、機器1にクラッカーのMACアドレスを登録させ、
+                        本来機器1が接続するはずであった機器2にもクラッカーのMACアドレスを登録させることで、両者間の通信に割り込んで情報を盗聴する攻撃
+                        <span class="plus">対策方法：HTTPS通信やVPN（トンネル化）静的ARPテーブルを使用する
+                        </span>
+                    </p>
+            </div>
 
+            <div class="info">
+                <p class="ore_text">MITM（Man In The Middle）Attack（中間者攻撃）</p>
+                    <p>上記のような通信している2者の間に割り込んで盗み見たり、改ざんしたりする攻撃
+                    </p>
+            </div>
+
+            <div class="info">
+                <p class="ore_text">メールスプーフィング</p>
+                    <p>正規の送信元からのメールであるかのように見せ、信頼させる手法
+                        <span class="plus">目的：マルウェアのリンクを開いてもらうため　フィシングの準備
+                            <br>メールスプーフィングは正規のメールに見せかける　フィッシングは正規のリンクだと思わせる手法
+                        </span>
+                    </p>
+            </div>
+
+            <div class="info">
+                <p class="ore_text">フィッシング</p>
+                    <p>悪意あるサイトを用意し、クレジットカード情報を入力させ盗むこと
+                        <span class="plus">フィッシングとメールスプーフィングはどちらも人間を狙う手法である
+                            <br>見分け方：ドメインは世界に１つしか作成できないためドメインをチェックする
+                        </span>
+                    </p>
+            </div>
+
+            <div class="info">
+                <p class="ore_text">DNS（Domain Name System）</p>
+                    <p>ドメインをIPアドレスに変換する仕組み
+                        <span class="plus">例：www.google.com - 142.250.206.68
+                            <br>ドメインは人間が理解しやすいように作られたもの
+                        </span>
+                    </p>
+            </div>
+
+            <div class="info">
+                <p class="ore_text">DNSスプーフィング</p>
+                    <p>DNSサーバー内でキャッシュとして保持されているドメインとIPアドレスを書き換える手法
+                        <span class="plus">方法：MITMによる書き換え　キャッシュポイズニングによる書き換え
+                            <br>DNSスプーフィング：DNSサーバーに侵入し一時的なな改変を行う
+                        </span>
+                    </p>
+            </div>
+
+            <div class="info">
+                <p class="ore_text">ファーミング</p>
+                    <p>ユーザーのPCに侵入又はネットワークに侵入しホストファイルなどを書き換え特定のIPにアクセスするようにする手法
+                        <span class="plus">侵入方法：マルウェア　MITM　フリーWiFiでのIP改変
+                            <br>ファーミング：PCに侵入しホストファイルを書き換え半永久的な改変を行う
+                        </span>
+                    </p>
+            </div>
 
 
 
@@ -247,10 +316,10 @@
     <!-- 最下部固定 -->
     <header>
         <div class="logo">
-            <a href="../index.html?v=1.0.4"><img src="../image/suna_white_hacker.PNG" alt="Suna_Rust logo" draggable="false"></a>
+            <a href="../index.html?v=1.0.5"><img src="../image/suna_white_hacker.PNG" alt="Suna_Rust logo" draggable="false"></a>
         </div>
     </header>
 
-    <script src="../js/main.js?v=1.0.4"></script>
+    <script src="../js/main.js?v=1.0.5"></script>
 </body>
 </html>
