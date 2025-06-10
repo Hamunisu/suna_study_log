@@ -61,7 +61,7 @@ section {
 }
 
 .title {
-    margin: 45px 0;
+    margin: 180px 0 45px 0;
     text-align: center;
     font-size: 40px;
     color: #2AA9A9;
@@ -69,7 +69,7 @@ section {
 
 .sub {
     text-align: center;
-    font-size: 21px;
+    font-size: 25px;
     margin-bottom: 10px;
     border:  solid #212d5d;
     border-radius: 25px;
@@ -108,9 +108,8 @@ a {
 }
 
 .info .plus {
-    font-size: 19px;
+    font-size: 21px;
     display: block;
-    font-size: 18px;
     text-align: center;
     border-top: 1px dashed #2d2d2d;
     width: 80%;
