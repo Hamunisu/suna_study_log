@@ -44,12 +44,27 @@
     </div>
    
     <div class="main_container japanese">
+
+
+
+
         <div class="main_box">
-            
+            <div class="section-box">
+                <a href="#1-1">～1-1　用語集～</a>
+                <a href="#2-1">～2-1　ハッキングフロー～</a>
+                <a href="#2-2">～2-2　偽造工作～</a>
+                <a href="#2-3">～2-3　ホワイトハッキングの応用～</a>
+                <a href="#3-1">～3-1　公開情報の収集方法～</a>
+                <a href="#3-2">～3-2　ネットワーク情報の収集～</a>
+                <a href="#3-3">～3-3　サーバーの情報取集～</a>
+            </div>
+<!-- 内容 1-1-->
+
+    <section id="1-1">
             <p class="date">2025/06/09</p>
                 <p class="title">～1-1　用語集～</p>
 
-<!-- 内容 -->
+
             <div class="info">
                 <p class="ore_text">ホワイトハッカー</p>
                     <p>攻撃者の視点　手法に精通し、セキュリティに活用する人
@@ -93,8 +108,11 @@
                     <p>情報資産に影響をもたらす可能性と被害の大きさを想定したもの
                     </p>
             </div>
+    </section>
 
-<!-- ２章 １-->
+<!-- ２ー１-->
+
+    <section id="2-1">
             <p class="title">～2-1　ハッキングフロー～</p>
                 <p class="sub">あくまで基本的な行動でありすべてのクラッカーの手順ではない
                     <br><span class="plus">例：Dos　webアプリケーション</span>
@@ -172,16 +190,18 @@
                         </span>
                     </p>
             </div>
-
+<!-- 注意 -->
             <div class="info">
                 <p class="red_text">※注意</p>
                     <p>ソーシャルエンジニアリング＋マルウェアが最強である
                         <span class="plus">内部の人間を利用しシステム破壊されると防ぎようがない（正式にアクセス権があるのが強い点）</span>
                     </p>
             </div>
+    </section>
 
+<!-- ２ー２-->
 
-<!-- ２章 ２-->
+    <section id="2-2">
             <p class="title">～2-2　偽造工作～</p>
                 <p class="sub">スプーフィングについて
                 </p>
@@ -293,9 +313,196 @@
                         </span>
                     </p>
             </div>
+    </section>
+
+<!-- ２ー３-->
+
+     <section id="2-3">
+             <p class="title">～2-3　ホワイトハッキングの応用～</p>
+                <p class="sub">ホワイトハッキングをするにあたっての知識・注意点
+            
+            <div class="info">
+                <p class="ore_text">攻撃特定性の高い攻撃</p>
+                    <p>全体的なセキュリティ強度を上げる必要がある
+                        <span class="plus">例：ゲームフリーク-テラリーク
+                            <br>行われる理由：扱っている情報に勝ちがある場合（任天堂　EPIC GAMES）　インサイダーが発生しやすい環境
+                        </span>
+                    </p>
+            </div>
+
+            <div class="info">
+                <p class="ore_text">事前準備の油断</p>
+                    <p>クラッカーは準備段階であると油断している場合がある
+                        <span class="plus">対策：クラッカーは攻撃前にスキャニングを行う可能性が高いため、定期的なスキャニングの監視を行いIPアドレスを特定する。
+                            <br>スキャニングには応答結果が必要でありIPスプーフィングが使えないため本来のIPである可能性が高い
+                        </span>
+                    </p>
+            </div>
+
+            <div class="info">
+                <p class="ore_text">事前準備で狙うもの</p>
+                    <p>従業員のSNS、ブログ等公開情報
+                    </p>
+            </div>
+
+            <div class="info">
+                <p class="ore_text">フォレンジック</p>
+                    <p>PCやネットワーク状に証拠を保存し調査、解析を行い犯罪の証明をすること
+                        <span class="plus">例：攻撃者特定につながるもの（IPアドレスなど）　攻撃の本質を特定すること　実害がないかの確認
+                            <br>コツ：おとりを素早く認識し不要な解析を防ぐ
+                                <br>フォレンジックの言葉の意味：犯罪捜査における分析、鑑識、法医学
+                        </span>
+                    </p>
+            </div>
+    </section>
+
+<!-- ３－１ -->
+
+    <section id="3-1">
+        <p class="date">2025/06/10</p>
+            <p class="title">～3-1　公開情報の収集方法～</p>
+                <div class="sub">公開情報とは　自らが意図している情報　公開せざる得ない情報　第三者が公開している情報　の３つである</div>
+            
+            <div class="info">
+                <p class="ore_text">危険性</p>
+                    <p>何気ない投稿がクラッカーに利用される可能性があること
+                    </p>
+            </div>
+
+            <div class="info">
+                <p class="ore_text">有益な情報</p>
+                    <p>URL　ドメイン　所在地　電話番号　従業員名
+                        <span class="plus">SNS上：フォロワー　レビュー　ブログ　名前
+                            <br>HTMLソースやrobots.txtも狙い目とされる（robots.txtとは検索エンジンなどのSEO対策にどこを見せるか見せないかを決めるもの-検索エンジンへの指示書のようなもの）
+                                <br>※その他公開情報も場合により有益である
+                        </span>
+                    </p>
+            </div>
+
+            <div class="info">
+                <p class="ore_text">第三者が公開している情報</p>
+                    <p>ニュースサイト　まとめサイト　Wiki
+                    </p>
+            </div>
+
+            <div class="info">
+                <p class="red_text">※注意</p>
+                    <p>インターネット上で公開しているものはほぼすべて有益であり、公開しないことが一番の対策である
+                        <br>ほかにも複数の従業員アカウントを参照された場合メアドのなずけるーるなどが推測される可能性がある
+                    </p>
+            </div>
+
+            <div class="info">
+                <p class="ore_text">検索エンジンの使い方</p>
+                    <p>AND（スペースを入れる）　OR（ORを付ける）　フレーズ（" "でワードを囲う）
+                        <span class="plus">例：<a href="https://www.google.com/advanced_search" target="_blank" rel="noopener noreferrer">google検索</a>
+                        </span>
+                    </p>
+            </div>
+    </section>
+
+<!-- ３－２ -->
+
+    <section id="3-2">
+                <p class="title">～3-2　ネットワーク情報の収集～</p>
+                <div class="sub">TCP/IPについて　ドメインからわかること　コマンドの動作</div>
+
+            <div class="info">
+                <p class="ore_text">TCP（Transmission Control Protcol）</p>
+                    <p>ネットワークの通信プロトコルの一つ、IPパケットが正確に届き順番どうりに受け取られるように管理するルール
+                        <span class="plus">パケットが遅れたり失った場合はエラーが返される。エラーが返されると再送する</span>
+                    </p>
+            </div>
+
+            <div class="info">
+                <p class="ore_text">IP（Internet Protocol）</p>
+                    <p>ネット上の住所を示すもの　郵便物の送り状のようなもの
+                        <span class="plus">IPパケットには送信先　送信元が入っている
+                            <br><br>IPを確認するサイト（.jpの場合）：<a href="https://whois.jprs.jp/" target="_blank" rel="noopener noreferrer">jprs</a>
+                            <br><br>jprs使用後（JPNICの場合）：<a href="https://whois.nic.ad.jp/cgi-bin/whois_gw" target="_blank" rel="noopener noreferrer">JPNIC</a>
+                        </span>
+                    </p>
+            </div>
+
+            <div class="info">
+                <p class="ore_text">ドメイン名からわかること</p>
+                    <p>jprsより：管理団体＆人物　DNS情報　担当者名　電話番号　メールドレス　IPアドレス
+                    </p>
+            </div>
+
+            <div class="info">
+                <p class="ore_text">IPアドレスからわかること</p>
+                    <p>JPNICより：管理団体　ネットワーク範囲（IPの数）　DNSの情報　担当者名
+                    </p>
+            </div>
+
+<!-- コマンド -->
+        <section id="3-3">
+            <div class="title">～3-3　サーバー情報の収集～</div>
+                <p class="sub">使用するコマンドの実際の動作を掲載</p>
+                <div class="info">
+                    <p class="ore_text">nslookup ＋（ドメイン）</p>
+                        <p>ドメインのIPアドレスが分かる
+                            <span class="plus">下の例は途中までがIPv6であり先はIPv4であることが分かる。
+                                <br>また複数からの応答であるためAkamaiなどCDN（Contents delivery Network）が考えられる</span>
+                        </p>
+
+                    <div class="command-box"><p>
+        
+        >nslookup example.com
+サーバー:  UnKnown
+Address:  2400:2650:9141:8100:1111:1111:1111:1111
+                    
+権限のない回答:
+名前:    example.com
+Addresses:  2600:1408:ec00:36::1736:7f24
+          2600:1406:bc00:53::b81e:94c8
+          2600:1408:ec00:36::1736:7f31
+          2600:1406:3a00:21::173e:2e66
+          2600:1406:bc00:53::b81e:94ce
+          2600:1406:3a00:21::173e:2e65
+          23.192.228.84
+          23.215.0.136
+          96.7.128.175
+          23.192.228.80
+          96.7.128.198
+          23.215.0.138</p></div>
+            </div>
+
+            <div class="info">
+                <p class="ore_text">ping ＋（ドメイン）</p>
+
+                    <p>ICMPでサーバーの生存確認を行う　「エコー要求（Echo request）」を送信して「エコー応答（Echo Reply）」を返してもらうコマンド
+                        <span class="plus">
+                            ICMP：（Internet Control Massage Protoco） ネットワークの状態を通知するための通信プロトコル
+                            <br><br>下の例はIPv6（IPv4は数字だけ）であり、すべてから応答がある。すべて169msであることから安定した通信であると分かる
+                        </span>
+                    </p>
+
+                <div class="command-box"><p>
+        
+        >ping example.com
+
+example.com [2600:1408:ec00:36::1736:7f31]に ping を送信しています 32 バイトのデータ:
+2600:1408:ec00:36::1736:7f31 からの応答: 時間 =169ms
+2600:1408:ec00:36::1736:7f31 からの応答: 時間 =169ms
+2600:1408:ec00:36::1736:7f31 からの応答: 時間 =169ms
+2600:1408:ec00:36::1736:7f31 からの応答: 時間 =169ms
+
+2600:1408:ec00:36::1736:7f31 の ping 統計:
+    パケット数: 送信 = 4、受信 = 4、損失 = 0 (0% の損失)、
+ラウンド トリップの概算時間 (ミリ秒):
+    最小 = 169ms、最大 = 169ms、平均 = 169ms
+                    </p></div>
+            </div>
 
 
 
+
+
+        </section>
+
+    </section>
 
 
 
