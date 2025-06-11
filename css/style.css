@@ -48,6 +48,15 @@ footer {
     font-size: 25px;
 }
 
+.gray{
+  margin-top: 20px;
+}
+
+.gray p{
+  font-size: 15px;
+  color: gray;
+}
+
 header {
     position: fixed;
     width: 100%;
