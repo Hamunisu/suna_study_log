@@ -60,9 +60,9 @@
 
             <div class="code-box">
                 <pre><code class="language-rust">
-fn main() {
-    println!("Hello, world!");
-}</code></pre></div> 
+fn main() {　//main関数を定義した
+    println!("Hello, world!");　//Hello,world!と表示させる
+}　//メイン関数終了</code></pre></div> 
 
 
             <div class="title japanese">
@@ -75,15 +75,17 @@ fn main() {
 
             <div class="code-box">
                 <pre><code class="language-rust">
-use rand::Rng;
+//準備段階
+use rand::Rng;　//例：randフォルダを呼び出しその中のRngフォルダを参照するように指示している
 use std::cmp::Ordering;
 use std::io;
 
+//内容スタート
 fn main() {
-    println!("数字を当ててみて!");
+    println!("数字を当ててみて!");//.exe開始時に表示される
 
-    let secret_number : u32 = rand::thread_rng().gen_range(1..=100);
-    println!("debug {}",secret_number);
+    let secret_number : u32 = rand::thread_rng().gen_range(1..=100);　//rand::thread_rng()で乱数生成を準備し、gen_range(..=)で乱数の範囲を定義する
+    println!("debug {}",secret_number);//debug用の表示
 
     loop {
     let mut guess = String::new();
@@ -247,7 +249,6 @@ fn main() {
         break;
     }
 }</code></pre></div>
-            
 
             <div class="title japanese">
                 <p>-ドキュメント内容-</p>
@@ -261,6 +262,70 @@ fn main() {
                 <p>ヒープ：メモリ容量が変更が可能でstring型などを保管している <br> スタックより容量が大きい</p>
                 </p>
             </div>
+
+<div class="title japanese">
+                <p>2025/06/12</p>
+            </div>
+
+            <div class="main japanese">
+                <p>計算ツール</p>
+            </div>
+
+            <div class="code-box">
+                <pre><code class="language-rust">
+use std::io;
+
+fn main() {
+
+    println!("計算ツール\nはじめの数値を入力してください\n");
+
+    let mut _number = String::new() ;
+    let mut _number2 = String::new();
+    let mut _operators =String::new();
+
+    io::stdin()
+    .read_line(&mut _number)
+    .expect("E00001：入力を読み込めませんでした");
+
+    println!("\n2つ目の数値を入力してください\n");
+
+
+    io::stdin()
+    .read_line(&mut _number2)
+    .expect("E00002：入力を読み込めませんでした");
+
+    println!("\n四則演算子を入力してください\n");
+
+    
+    io::stdin()
+    .read_line(&mut _operators)
+    .expect("E00003：入力を読み込めませんでした");
+
+    let num1:f64 = _number.trim().parse().expect("数値変換エラー");
+    let num2: f64 = _number2.trim().parse().expect("数値変換エラー");
+    let op = _operators.trim();
+
+    if (op == "/" || op == "%") && num2 == 0.0 {
+        println!("E00005：0で割ることはできません");
+        return;
+    }
+
+    let result = match op  {
+        "+" => num1 + num2,
+        "-" => num1 - num2,
+        "*" => num1 * num2,
+        "/" => num1 / num2,
+        "%" => num1 % num2,
+        _ => {
+            println!("E00004：不正な演算子です");
+            return;
+        }
+    };
+
+    println!("A. {}",result);
+
+}</code></pre></div>
+
                         
             <footer>
                 <p class="english">&copy; Sunamayu.</p>
