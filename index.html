@@ -18,12 +18,12 @@
     <link rel="stylesheet" href="css/rust.css?v1.0.6c">
 
     <!-- ファビコン -->
-    <link rel="icon" type="image/png" href="image/favicon/favicon-96x96.png" sizes="96x96" />
-    <link rel="icon" type="image/svg+xml" href="image/favicon/favicon.svg" />
-    <link rel="shortcut icon" href="image/favicon/favicon.ico" />
-    <link rel="apple-touch-icon" sizes="180x180" href="image/favicon/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" href="image/r_favicon/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="image/r_favicon/favicon.svg" />
+    <link rel="shortcut icon" href="image/r_favicon/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="image/r_favicon/apple-touch-icon.png" />
     <meta name="apple-mobile-web-app-title" content="S__Rust" />
-    <link rel="manifest" href="image/favicon/site.webmanifest" />
+    <link rel="manifest" href="image/r_favicon/site.webmanifest" />
 
     <!-- Rustシステム -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet" />
@@ -41,58 +41,112 @@
 </head>
 
 <body>
-    
+    <div id="goTop"></div>
     
     <div class="top japanese">
             <h1>Rust Study Log </h1>
             <h2>coded by Suna</h2>
     </div>
+
+
    
     <div class="content japanese">
         <div class="all">
-            <div class="title japanese">
-                <p>2025/06/09</p>
+
+<!-- セクションメニュー -->
+            <div class="section-box">
+                <a href="#1">～Hello world～</a>
+                <a href="#2">～数字あてゲーム作成～</a>
+                <a href="#3">～疑似コマンドゲーム～</a>
+                <a href="#4">～駐車券システム（簡易）～</a>
+                <a href="#5">～ドキュメント内容（テキスト）～</a>
+                <a href="#6">～計算ツール～</a>
+                <a href="#7">～Discord Bot senerity～</a>
             </div>
 
-            <div class="main japanese">
-                <p>Hello World</p>
-            </div>
+<!-- 内容 -->
+<!-- Hello world -->
 
-            <div class="code-box">
-                <pre><code class="language-rust">
-fn main() {　//main関数を定義した
-    println!("Hello, world!");　//Hello,world!と表示させる
+<section id="1">
+    <div class="title"><a href="#goTop">～Hello World～</a></div>
+        <div class="code-box">
+        <pre><code class="language-rust">
+fn main() {　//fn 関数名(引数: 型)
+    println!("Hello, world!");　//Hello,world!と表示させるマクロ
 }　//メイン関数終了</code></pre></div> 
 
 
-            <div class="title japanese">
-                <p>2025/06/09</p>
-            </div>
+    <div class="info">
+        <p class="word">fn</p>
+            <p>関数定義する合図　ファンクション(function)の略
+                <span class="plus">関数: fn内の処理を関数としてひとまとめにして後に使えるようにしたもの</span>
+            </p>
+    </div>
 
-            <div class="main japanese">
-                <p>数字あてゲーム作成</p>
-            </div>
+    <div class="info">
+        <p class="word-mean">引数</p>
+            <p>（）に引数を記載することで呼び出せる
+                <span class="plus">&str: 不変借用　読み取り専用　軽量　（引数の変数はほかで使用できる）
+                    <br><br>String: 所有権譲渡　元の変数が使えなくなり、自由に変更・破棄できる（引数の変数はほかで使用できなくなる）
+                        <br><br>&mut: 可変借用　書き換え可能（引数の変数はほかで使用する際、今回書き換えたものが使用される）
+                </span>
+            </p>
+    </div>
 
-            <div class="code-box">
-                <pre><code class="language-rust">
+    <div class="info">
+        <p class="word-mean">処理</p>
+            <p>関数内でやること
+            </p>
+    </div>
+
+    <div class="info">
+        <p class="word-mean">戻り値</p>
+            <p>関数の処理の後に返すデータ　それをmain内などで確認してErrorかどうか判断する
+                <br>※なくても問題はない
+            </p>
+    </div>
+
+    <div class="info">
+        <p class="word">main</p>
+            <p>プログラムのエントリーポイント　自動で呼ばれる　mainがなければエラーになる
+                <br><span class="plus">通常の使用方法は fn main() {}</span>
+            </p>
+    </div>
+
+    <div class="info">
+        <p class="word">println!</p>
+            <p>標準出力に文字列を表示するためのマクロ
+                <br><span class="plus">"!"がマクロという意味であり関数ではない
+                    <br>マクロ: 便利な省略型　コンパイル時に展開される
+                </span>
+            </p>
+    </div>
+</section>
+
+<!-- 数字あてゲーム作成 -->
+
+<section id="2">
+    <div class="title"><a href="#goTop">～数字あてゲーム作成～</a></div>
+        <div class="code-box">
+        <pre><code class="language-rust">
 //準備段階
 use rand::Rng;　//例：randフォルダを呼び出しその中のRngフォルダを参照するように指示している
 use std::cmp::Ordering;
-use std::io;
+use std::io;//stdはRustの標準ライブラリである
 
 //内容スタート
 fn main() {
-    println!("数字を当ててみて!");//.exe開始時に表示される
+    println!("数字を当ててみて!");//.exe開始時に最初に表示される
 
     let secret_number : u32 = rand::thread_rng().gen_range(1..=100);　//rand::thread_rng()で乱数生成を準備し、gen_range(..=)で乱数の範囲を定義する
     println!("debug {}",secret_number);//debug用の表示
 
-    loop {
-    let mut guess = String::new();
+    loop {//これ以降のスコープ内のものをループさせる
+    let mut guess = String::new();//空のString型の変数を作成する
     
     io::stdin()
         .read_line(&mut guess)
-        .expect("入力の読み込みに失敗しました");
+        .expect("入力の読み込みに失敗しました");//.exepectはエラーの際にreturnで終わらせる事とprintln!で原因を表示させる
 
         let guess : u32 = match guess.trim().parse(){
             Ok(num) => num,
@@ -116,16 +170,63 @@ fn main() {
 }</code></pre></div>
 
 
-            <div class="title japanese">
-                <p>2025/06/09</p>
-            </div>
+    <div class="info">
+        <p class="word">use</p>
+            <p>準備段階　クレート・モジュールの中を使いますよと宣言するもの
+                <br><span class="plus">Rustはどこに何がを明示的に宣言する必要がある
+                    <br>use std::io;を使用すればフルパスで書かなくていい
+                </span>
+            </p>
+    </div>
+    
+    <div class="info">
+        <p class="word">let</p>
+            <p>変数定義するもの　デフォルトでは不変　let mutで可変変数
+                <br><span class="plus">i32やu32,u64などを付けることで型を明示する（明示したいとき、コンパイル時に推論できないときに使用）
+                    <br>let x = x + 1で上書き（シャドーイング）することも可能
+                </span>
+            </p>
+    </div>
+    
+    <div class="info">
+        <p class="word">loop</p>
+            <p>この中の処理は条件なしに"永遠"繰り返される
+                <br><span class="plus">breakを使用することで抜け出せる
+                </span>
+            </p>
+    </div>
+    
+    <div class="info">
+        <p class="word"></p>
+            <p>
+                <br><span class="plus">
+                </span>
+            </p>
+    </div>
+    
+    <div class="info">
+        <p class="word"></p>
+            <p>
+                <br><span class="plus">
+                </span>
+            </p>
+    </div>
+    
+    <div class="info">
+        <p class="word"></p>
+            <p>
+                <br><span class="plus">
+                </span>
+            </p>
+    </div>
+</section>
 
-            <div class="main japanese">
-                <p>疑似コマンドゲーム</p>
-            </div>
+<!-- 疑似コマンドゲーム -->
 
-            <div class="code-box">
-            <pre><code class="language-rust">
+<section id="3">
+    <div class="title"><a href="#goTop">～疑似コマンドゲーム～</a></div>
+        <div class="code-box">
+        <pre><code class="language-rust">
 use rand::Rng;
 use std::io;
 
@@ -188,17 +289,14 @@ fn main() {
         }
     }
 }</code></pre></div>
+</section>
 
-            <div class="title japanese">
-                <p>2025/06/09</p>
-            </div>
+<!-- 駐車券システム（簡易版） -->
 
-            <div class="main japanese">
-                <p>駐車券システム（簡易版）</p>
-            </div>
-
-            <div class="code-box">
-                <pre><code class="language-rust">
+<section id="4">
+    <div class="title"><a href="#goTop">～駐車券システム（簡易版）～</a></div>
+        <div class="code-box">
+        <pre><code class="language-rust">
 use std::io;
 fn main() {
             
@@ -249,28 +347,26 @@ fn main() {
         break;
     }
 }</code></pre></div>
+</section>
 
-            <div class="title japanese">
-                <p>-ドキュメント内容-</p>
-            </div>
-            
-            <div class="main japanese">
+<!-- ドキュメント内容 -->
+
+<section id="5">
+    <div class="title"><a href="#goTop">～ドキュメント内容～</a></div>
+        <div class="main ">
                 <p>スタック：軽量固定容量メモリで高速　スコープ終了時に解放される　ポインタ　長さ　を持っている 
                     <br>　例：Hello = ポインタ & 長さ</p>
                 <p>　-ポインタ：ヒープ内の変数の中身の住所</p>
                 <p>　-長さ：ヒープ内の文字列が何バイトあるのか示す　</p>
                 <p>ヒープ：メモリ容量が変更が可能でstring型などを保管している <br> スタックより容量が大きい</p>
                 </p>
-            </div>
+    </div>
+</section>
 
-<div class="title japanese">
-                <p>2025/06/12</p>
-            </div>
+<!-- 計算ツール -->
 
-            <div class="main japanese">
-                <p>計算ツール</p>
-            </div>
-
+<section id="6">
+    <div class="title"><a href="#goTop">～計算ツール～</a></div>
             <div class="code-box">
                 <pre><code class="language-rust">
 use std::io;
@@ -325,7 +421,33 @@ fn main() {
     println!("A. {}",result);
 
 }</code></pre></div>
+</section>
 
+<!-- discord senerity まとめパック -->
+
+<section id="7">
+    <div class="title"><a href="#goTop">discord bot senerity まとめパック</a></div>
+        <div class="code-box">
+        <pre><code class="language-rust">
+let token = env::var("DISCORD_TOKEN").expect("TOKEN not found");
+    //.envに書いたトークンを呼び出すorエラー処理
+
+let intents = GatewayIntents::GUILD_MESSAGES | GatewayIntents::MESSAGE_CONTENT;
+    //intentsはdiscord APIに要求(GatewayIntents)する GUIILD_MESSSEGESはdiscordの送信、編集などのメッセージの動作、MESSEGE_CONTENTは内容を受け取る
+
+let mut client = Client::builder(&token, intents)
+    //clientはAPIとBOTの連携を開始するための動作（token intentsをAPIに渡す）
+    .event_handler(Handler)
+        //senerityクレート内のClientBuilder構造体のもの Botがどういう動作をするかというのを（）内の
+    .await
+        //
+    .expect("Error creating client");
+
+if let Err(why) = client.start().await {
+    println!("Client error: {:?}", why);
+}
+</code></pre></div>
+</section>
                         
             <footer>
                 <p class="english">&copy; Sunamayu.</p>

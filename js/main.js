@@ -2,16 +2,25 @@ document.addEventListener('DOMContentLoaded', function () {
   document.querySelectorAll('pre code').forEach((block) => {
     const pre = block.parentElement;
 
-    // ボタンを作成
     const button = document.createElement('button');
     button.innerText = '📋 copy';
     button.className = 'copy-button';
 
-    // コピー処理（整形なし）
     button.addEventListener('click', () => {
-      let text = block.textContent;   // ←ここをcodeからblockに変更
-      // 先頭・末尾の空行・空白を削除
-      text = text.replace(/^\s*\n/, '').replace(/\n\s*$/, '');
+      let text = block.textContent;
+
+      let lines = text.split('\n');
+
+      // 各行について、行の中の // 以降を削除（空白除去はしない）
+      let filteredLines = lines.map(line => {
+        const index = line.indexOf('//');
+        if (index !== -1) {
+          return line.slice(0, index).replace(/\s+$/, ''); // コメント前の空白は削除
+        }
+        return line;
+      });
+
+      text = filteredLines.join('\n');
 
       navigator.clipboard.writeText(text).then(() => {
         button.textContent = 'copied';
@@ -22,7 +31,6 @@ document.addEventListener('DOMContentLoaded', function () {
       });
     });
 
-    // 配置
     pre.style.position = 'relative';
     pre.appendChild(button);
   });

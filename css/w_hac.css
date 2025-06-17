@@ -54,17 +54,6 @@ section {
     scroll-margin-top: 50px;
 }
 
-.title {
-    margin: 180px 0 45px 0;
-    text-align: center;
-
-}
-
-.title a {
-        font-size: 40px;
-    color: #2AA9A9;
-}
-
 .sub {
     text-align: center;
     font-size: 25px;
@@ -74,45 +63,9 @@ section {
     padding: 20px 25px;
 }
 
-
-
-/* 本文 */
-.info {
-    display: block;
-    font-size: 30px;
-    padding: 20px 0;
-    text-align: center;
-    border-bottom: solid 2px #2d2d2d;
-}
-
-.info p{
-    font-size: 27px;
-    padding: 20px 0;
-}
-
-.info p.ore_text {
-    color: orange;
-    font-size: 40px;
-}
-
-.info p.red_text {
-    color: red;
-    font-size: 40px;
-}
-
 a {
     text-decoration: none;
     color: #b1a47a;
-}
-
-.info .plus {
-    font-size: 21px;
-    display: block;
-    text-align: center;
-    border-top: 1px dashed #2d2d2d;
-    width: 80%;
-    margin: 10px auto;
-    padding-top: 20px;  
 }
 
 .ore_line{
@@ -138,6 +91,16 @@ a {
     font-size: 20px;
 }
 
+@media (max-width: 1300px) and (min-width: 601px) {
+    .top h1 {
+        font-size: 250%;
+    }
+
+    .top h2 {
+        padding-top: 40px;
+        font-size: 200%;
+    }
+}
 
 @media (max-width: 600px) {
     .all {
@@ -166,47 +129,19 @@ a {
         font-size: 20px;
     }
     
-    .title {
-        margin-top: 50px;
-        margin-bottom: 20px;
-        text-align: center;
-
-    }
-
-    .title a {
-        font-size: 25px;
-    }
-    
     .sub {
         font-size: 17px;
         margin-bottom: 10px;
         padding: 10px 30px;
     }
 
-    .info p{
-        font-size: 20px;
-    }
-
-    .info p.ore_text {
-
-        font-size: 25px;
-    }
-    
-    .info p.red_text {
-        font-size: 25px;
-    }
-
-    .info .plus {
-        font-size: 13px;
-    }
-
     .ore_line{
         text-decoration: underline solid 2.5px orange;
     }
 
-        .command-box {
-            width: 100%;
-        }
+    .command-box {
+        width: 100%;
+    }
 
     .command-box p {
         font-size: 15px;
