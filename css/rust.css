@@ -13,7 +13,7 @@ body {
 }
 
 .all {
-    width: 80%;
+    width: 59%;
     height: auto;
     margin-bottom: 200px;
 }
@@ -22,28 +22,6 @@ body {
     width: 65%;
     height: auto;
     margin-bottom: 210px;
-}
-
-.section-box {
-    margin: 30px auto;
-    width: 65%;
-    height: auto;
-    border: solid 2px #212d5d;
-    border-radius: 45px;
-    text-align: center;
-
-}
-
-.section-box a {
-    display: block;
-    padding: 15px;
-    font-size: 30px;
-    color: #212d5d;
-    text-decoration: none;
-}
-
-section {
-    scroll-margin-top: 50px;
 }
 
 .top h1 {
@@ -128,13 +106,6 @@ pre {
         margin-top: 10px;
         margin-bottom: 40px;
         font-size: 15px;
-    }
-
-    .section-box  {
-        width: 100%;
-    }
-    .section-box a {
-        font-size: 20px;
     }
 
     .top h1 {

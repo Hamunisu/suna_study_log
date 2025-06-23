@@ -14,8 +14,8 @@
 
     <!-- CSS -->
     <link rel="stylesheet" href="https://unpkg.com/ress@5.0.2/dist/ress.min.css">
-    <link rel="stylesheet" href="css/style.css?v=1.0.6c">
-    <link rel="stylesheet" href="css/rust.css?v1.0.6c">
+    <link rel="stylesheet" href="css/style.css?v=1.0.9">
+    <link rel="stylesheet" href="css/rust.css?v1.0.9">
 
     <!-- ファビコン -->
     <link rel="icon" type="image/png" href="image/r_favicon/favicon-96x96.png" sizes="96x96" />
@@ -131,22 +131,22 @@ fn main() {　//fn 関数名(引数: 型)
         <pre><code class="language-rust">
 //準備段階
 use rand::Rng;　//例：randフォルダを呼び出しその中のRngフォルダを参照するように指示している
-use std::cmp::Ordering;
-use std::io;//stdはRustの標準ライブラリである
+use std::cmp::Ordering;//stdはRustの標準ライブラリでordering（比較）を使えるようになる
+use std::io;　//io= input/output 入力を受け付けたり読み込んだり
 
 //内容スタート
 fn main() {
-    println!("数字を当ててみて!");//.exe開始時に最初に表示される
+    println!("数字を当ててみて!");　//.exe開始時に最初に表示される
 
     let secret_number : u32 = rand::thread_rng().gen_range(1..=100);　//rand::thread_rng()で乱数生成を準備し、gen_range(..=)で乱数の範囲を定義する
-    println!("debug {}",secret_number);//debug用の表示
+    println!("debug {}",secret_number);　//debug用の表示
 
-    loop {//これ以降のスコープ内のものをループさせる
-    let mut guess = String::new();//空のString型の変数を作成する
+    loop {
+    let mut guess = String::new();
     
-    io::stdin()
-        .read_line(&mut guess)
-        .expect("入力の読み込みに失敗しました");//.exepectはエラーの際にreturnで終わらせる事とprintln!で原因を表示させる
+    io::stdin()　//ioクレート内にあるstdin()を利用する
+        .read_line(&mut guess)　//.read_lineで一行を読み込み、&mut guessでguessの中に読み込んだものを入れる
+        .expect("入力の読み込みに失敗しました");
 
         let guess : u32 = match guess.trim().parse(){
             Ok(num) => num,
@@ -197,28 +197,92 @@ fn main() {
     </div>
     
     <div class="info">
-        <p class="word"></p>
-            <p>
-                <br><span class="plus">
+        <p class="word">String::new()</p>
+            <p>空のString型を生成する
+                <br><span class="plus">中身は""である
                 </span>
             </p>
     </div>
     
     <div class="info">
-        <p class="word"></p>
-            <p>
-                <br><span class="plus">
+        <p class="word">io::stdin()</p>
+            <p>標準入力を受け付ける関数
+                <br><span class="plus">use使用しているためstd::io::stdin()と書かなくていい
                 </span>
             </p>
     </div>
     
     <div class="info">
-        <p class="word"></p>
-            <p>
-                <br><span class="plus">
+        <p class="word">.read_line()</p>
+            <p>標準入力を文字列として読み取る関数
+                <br><span class="plus">(&mut 変数名)でその変数に読み取ったものを入れることができる
                 </span>
             </p>
     </div>
+    
+    <div class="info">
+        <p class="word">.expect</p>
+            <p>returnとprintln!をまとめたエラー型
+                <br><span class="plus">Ok(_) のとき - 無視
+                    <br>Err(_) のとき - panic!で内容を表示して終了させる
+                </span>
+            </p>
+    </div>
+    
+    <div class="info">
+        <p class="word">match</p>
+            <p>値そのものが何かに応じて内部で分岐させる
+                <br><span class="plus">Result型と相性抜群
+                </span>
+            </p>
+    </div>
+    
+    <div class="info">
+        <p class="word">Result</p>
+            <p>処理の成功または失敗を表す型
+                <br><span class="plus">
+                    <br>成功の時に数値が必要ならOk(num)、必要ないならOk(_)（この場合()ないの変数は何でもよい）
+                        <br>エラー時にエラー内容が必要ならErr(e)、必要ないならErr(_)
+                            <br>エラー時の{:?}はデバック用表示にするためのもの
+                </span>
+            </p>
+    </div>
+    
+    <div class="info">
+        <p class="word">.trim()</p>
+            <p>文字の前後の空白、改行をなくす
+                <br><span class="plus">標準でついている\nなどをなくしてmatchなどを使用できるようにする
+                </span>
+            </p>
+    </div>
+    
+    <div class="info">
+        <p class="word">.parse()</p>
+            <p>文字列を別の型（数値など）に変換するメゾット
+                <br><span class="plus">"42"をparseでu32型の42に変換できる
+                    <br>安全のために.expect()をセットでつけることがおすすめ
+                </span>
+            </p>
+    </div>
+    
+    <div class="info">
+        <p class="word">continue</p>
+            <p>現在のループの１回の処理を終了し、次の反復に進む
+                <br><span class="plus">スコープを抜け出すわけではない
+                </span>
+            </p>
+    </div>
+    
+    <div class="info">
+        <p class="word">.cmp()</p>
+            <p>大小関係を判定するメゾット　.cmp()前についてる変数を()の変数を基準にきめる
+                <br><span class="plus">Less =>()内より小さい
+                    <br>Greater =>()内より大きい
+                        <br>Equal =>()と等しい
+                </span>
+            </p>
+    </div>
+
 </section>
 
 <!-- 疑似コマンドゲーム -->
@@ -354,12 +418,12 @@ fn main() {
 <section id="5">
     <div class="title"><a href="#goTop">～ドキュメント内容～</a></div>
         <div class="main ">
-                <p>スタック：軽量固定容量メモリで高速　スコープ終了時に解放される　ポインタ　長さ　を持っている 
+                <!-- <p>スタック：軽量固定容量メモリで高速　スコープ終了時に解放される　ポインタ　長さ　を持っている 
                     <br>　例：Hello = ポインタ & 長さ</p>
                 <p>　-ポインタ：ヒープ内の変数の中身の住所</p>
                 <p>　-長さ：ヒープ内の文字列が何バイトあるのか示す　</p>
                 <p>ヒープ：メモリ容量が変更が可能でstring型などを保管している <br> スタックより容量が大きい</p>
-                </p>
+                </p> -->
     </div>
 </section>
 
@@ -463,13 +527,13 @@ if let Err(why) = client.start().await {
     <!-- 最下部固定 -->
     <header>
         <div class="logo">
-            <a href="html/w_hac.html?v=1.0.6c"><img src="image/suna_Rust.png" alt="Suna_Rust logo" draggable="false"></a>
+            <a href="html/w_hac.html?v=1.0.9"><img src="image/suna_Rust.png" alt="Suna_Rust logo" draggable="false"></a>
         </div>
     </header>
     
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-rust.min.js"></script>
-    <script src="js/main.js?v=1.0.6c"></script>
+    <script src="js/main.js?v=1.0.9"></script>
 </body>
 </html>

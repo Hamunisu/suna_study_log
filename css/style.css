@@ -49,6 +49,27 @@ html {
     text-decoration: none;
 }
 
+.section-box {
+    margin: 30px auto;
+    width: 65%;
+    height: auto;
+    border: solid 2px #212d5d;
+    border-radius: 45px;
+    text-align: center;
+
+}
+
+.section-box a {
+    display: block;
+    padding: 15px;
+    font-size: 30px;
+    color: #212d5d;
+    text-decoration: none;
+}
+
+section {
+    scroll-margin-top: 50px;
+}
 
 .info {
     display: block;
@@ -185,6 +206,14 @@ header {
   .title a {
       font-size: 25px;
   }
+  
+  .section-box  {
+      width: 100%;
+  }
+  .section-box a {
+      font-size: 20px;
+  }
+
 
   
   .info p{

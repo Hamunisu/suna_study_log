@@ -14,8 +14,8 @@
 
     <!-- CSS -->
     <link rel="stylesheet" href="https://unpkg.com/ress@5.0.2/dist/ress.min.css">
-    <link rel="stylesheet" href="../css/style.css?v=1.0.6c">
-    <link rel="stylesheet" href="../css/w_hac.css?v=1.0.6c">
+    <link rel="stylesheet" href="../css/style.css?v=1.0.9">
+    <link rel="stylesheet" href="../css/w_hac.css?v=1.0.9">
 
     <!-- ファビコン -->
     <link rel="icon" type="image/png" href="../image/w_favicon/favicon-96x96.png" sizes="96x96" />
@@ -188,6 +188,7 @@
                         </span>
                     </p>
             </div>
+
 <!-- 注意 -->
             <div class="info">
                 <p class="red_text">※注意</p>
@@ -206,7 +207,7 @@
 
             <div class="info">
                 <p class="ore_text">IPスプーフィング</p>
-                    <p>クラッカーが攻撃元を隠すために行う
+                    <p>クラッカーが<span class="ore_line">攻撃元を隠すため</span>に行う
                         <span class="plus">利用例：おとりとして多数のIPから対象にアクセスする　踏み台として使う（クラッカー-IP-IP-対象）
                             <br>踏み台のデメリット：返答があった場合偽のIPに送られるためクラッカーは受け取れない
                         </span>
@@ -233,7 +234,7 @@
 
             <div class="info">
                 <p class="ore_text">DHCPスタベーション（枯渇）攻撃</p>
-                    <p>DHCPサーバーのMACアドレスとIPを結び付けてネットに接続する時の動作を利用しMACアドレススプーフィングを行いIPアドレスを減らす
+                    <p>DHCPサーバーのMACアドレスとIPを結び付けてネットに接続する時の動作を利用し<span class="ore_line">MACアドレススプーフィングを行い</span>IPアドレスを減らす
                         <span class="plus">目的：リースプールを枯渇させる事で社員がネットに接続できないようにする
                             <br><br>利点：ネットワークサービスを停止させれる　低コスト　広範囲に影響する（ネットワーク全体）　MACアドレススプーフィングでばれにくい
                                 <br><br>対策：MACアドレスフィルタリングを使用し社内のMACアドレスのみを登録しておくことでその他のMACアドレスを防ぐ
@@ -254,7 +255,7 @@
 
             <div class="info">
                 <p class="ore_text">ARPキャッシュポイズニング攻撃</p>
-                    <p>ARPキャッシュテーブルのリセット時に、機器1にクラッカーのMACアドレスを登録させ、
+                    <p><span class="ore_line">ARPキャッシュテーブルのリセット時</span>に、機器1にクラッカーのMACアドレスを登録させ、
                         本来機器1が接続するはずであった機器2にもクラッカーのMACアドレスを登録させることで、両者間の通信に割り込んで情報を盗聴する攻撃
                         <span class="plus">対策方法：HTTPS通信やVPN（トンネル化）静的ARPテーブルを使用する
                         </span>
@@ -296,7 +297,7 @@
 
             <div class="info">
                 <p class="ore_text">DNSスプーフィング</p>
-                    <p>DNSサーバー内でキャッシュとして保持されているドメインとIPアドレスを書き換える手法
+                    <p>DNSサーバー内でキャッシュとして保持されている<span class="ore_line">ドメインとIPアドレス</span>を書き換える手法
                         <span class="plus">方法：MITMによる書き換え　キャッシュポイズニングによる書き換え
                             <br>DNSスプーフィング：DNSサーバーに侵入し一時的なな改変を行う
                         </span>
@@ -330,8 +331,8 @@
 
             <div class="info">
                 <p class="ore_text">事前準備の油断</p>
-                    <p>クラッカーは準備段階であると油断している場合がある
-                        <span class="plus">対策：クラッカーは攻撃前にスキャニングを行う可能性が高いため、定期的なスキャニングの監視を行いIPアドレスを特定する。
+                    <p>クラッカーは準備段階であると<span class="ore_line">油断している場合がある</span>
+                        <span class="plus">対策：クラッカーは攻撃前にスキャニングを行う可能性が高いため、<span class="ore_line">定期的なスキャニングの監視</span>を行いIPアドレスを特定する。
                             <br>スキャニングには応答結果が必要でありIPスプーフィングが使えないため本来のIPである可能性が高い
                         </span>
                     </p>
@@ -370,7 +371,7 @@
                 <p class="ore_text">有益な情報</p>
                     <p>URL　ドメイン　所在地　電話番号　従業員名
                         <span class="plus">SNS上：フォロワー　レビュー　ブログ　名前
-                            <br>HTMLソースやrobots.txtも狙い目とされる（robots.txtとは検索エンジンなどのSEO対策にどこを見せるか見せないかを決めるもの-検索エンジンへの指示書のようなもの）
+                            <br><span class="ore_line">HTMLソースやrobots.txtも狙い目</span>とされる（robots.txtとは検索エンジンなどのSEO対策にどこを見せるか見せないかを決めるもの-検索エンジンへの指示書のようなもの）
                                 <br>※その他公開情報も場合により有益である
                         </span>
                     </p>
@@ -384,7 +385,7 @@
 
             <div class="info">
                 <p class="red_text">※注意</p>
-                    <p>インターネット上で公開しているものはほぼすべて有益であり、公開しないことが一番の対策である
+                    <p>インターネット上で公開しているものは<span class="ore_line">ほぼすべて有益</span>であり、公開しないことが一番の対策である
                         <br>ほかにも複数の従業員アカウントを参照された場合メアドのなずけるーるなどが推測される可能性がある
                     </p>
             </div>
@@ -432,7 +433,7 @@
                     <p>JPNICより：管理団体　ネットワーク範囲（IPの数）　DNSの情報　担当者名
                     </p>
             </div>
-
+</section>
 <!-- コマンド -->
         <section id="3-3">
             <div class="title"><a href="#goTop">～3-3　サーバー情報の収集～</a></div>
@@ -469,7 +470,7 @@ Addresses:  2600:1408:ec00:36::1736:7f24
             <div class="info">
                 <p class="ore_text">ping ＋（ドメイン）</p>
 
-                    <p>ICMPでサーバーの生存確認を行う　「エコー要求（Echo request）」を送信して「エコー応答（Echo Reply）」を返してもらうコマンド
+                    <p><span class="ore_line">ICMP</span>でサーバーの生存確認を行う　「エコー要求（Echo request）」を送信して「エコー応答（Echo Reply）」を返してもらうコマンド
                         <span class="plus">
                             ICMP：（Internet Control Massage Protoco） ネットワークの状態を通知するための通信プロトコル
                             <br><br>下の例はIPv6（IPv4は数字だけ）であり、すべてから応答がある。すべて169msであることから安定した通信であると分かる
@@ -489,16 +490,66 @@ example.com [2600:1408:ec00:36::1736:7f31]に ping を送信しています 32 �
 2600:1408:ec00:36::1736:7f31 の ping 統計:
     パケット数: 送信 = 4、受信 = 4、損失 = 0 (0% の損失)、
 ラウンド トリップの概算時間 (ミリ秒):
-    最小 = 169ms、最大 = 169ms、平均 = 169ms
-                    </p></div>
+    最小 = 169ms、最大 = 169ms、平均 = 169ms</p></div>
+            </div>
+
+
+            <div class="info">
+                <p class="ore_text">（windows）: tracert　（mac/Linux）: traceroute</p>
+
+                    <p><span class="ore_line">TTL</span>を使用し、パケットがどのような経路で目的地に向かうのかを追跡する（-4や-6を付けることでIPv4 IPv6での確認ができる）
+                        <span class="plus">TTL: Time to Live: パケットがルーターなどを通過できる数を表す　0になるとパケットは消滅する　（パケットがネット上に永遠に存在するのを防ぐため）
+                            <br><br>以下は正常に接続できていることが分かり、3～5はTTLが消えてもエラーを返さない設定になってる（正常）10～13まではakamaiが管理しているのが分かる
+                        </span>
+                    </p>
+        
+
+                <div class="command-box"><p>
+        
+        >tracert example.com
+
+example.com [2600:1406:bc00:53::b81e:94c8] へのルートをトレースしています
+経由するホップ数は最大 30 です:
+
+  1    ＜1 ms    ＜1 ms    ＜1 ms  2400:2650:9141:8100:1111:1111:1111:1111
+  2     2 ms     1 ms     1 ms  2400:2650:9141:8100:3ae0:8eff:feef:c465
+  3     *        *        *     要求がタイムアウトしました。
+  4     *        *        *     要求がタイムアウトしました。
+  5     *        *        *     要求がタイムアウトしました。
+  6     4 ms     4 ms     4 ms  2400:2000:bb1a:3801::1
+  7   118 ms   120 ms   117 ms  2600:808:26f::15
+  8   118 ms   119 ms   118 ms  loopback1.LSANCAJW-PPR01-CC.ALTER.NET [2600:80a::15]
+  9   120 ms   205 ms   181 ms  2600:80a:86f::6
+ 10   135 ms   135 ms   135 ms  vlan103.r13.spine101.lax01.fab.netarch.akamai.com [2600:1406:b400:650e::1]
+ 11   136 ms   137 ms   135 ms  vlan113.r03.leaf105.lax01.fab.netarch.akamai.com [2600:1406:b400:1007::1]
+ 12   133 ms   131 ms   131 ms  vlan102.r01.tor106.lax01.fab.netarch.akamai.com [2600:1406:b400:7a01::1]
+ 13   138 ms   135 ms   135 ms  g2600-1406-bc00-0053-0000-0000-b81e-94c8.deploy.static.akamaitechnologies.com [2600:1406:bc00:53::b81e:94c8]
+
+トレースを完了しました。</p></div>
             </div>
 
 
 
+            
+            <div class="info">
+                <p class="ore_text">nmap</p>
 
+                    <p>Network Mapper（ネットワーク・マッパー）の略　ネットワーク上のホストやポート、サービス、OSなどを調査・解析するためのコマンドラインツール　実行場所によっては<span class="ore_line">違法になる</span>
+                        <span class="plus">-sSなど"-s"から始まるもののみ使用可能
+                        </span>
+                    </p>
 
-        </section>
-
+<!-- 注意 -->
+            <div class="info">
+                <p class="red_text">※注意</p>
+                    <p>実行場所によっては<span class="ore_line">違法</span>となる場合があるため練習環境に注意が必要である
+                        <span class="plus">nmapを除く上記3つはexample.comで実行可能
+                            <br><br>pingとtracert（traceroute）の違いは"ping"は目的地の生存確認　"tracert（traceroute）"は道のり確認
+                                <br><br>nmap: 許可なく他人のネットワークやサーバーに実行すると日本では不正アクセス禁止法違反になる
+                                    <br>もし実行するなら明示的に許可された環境（TryHackMe等）のみで使用すること！
+                        </span>
+                    </p>
+            </div>
     </section>
 
 
@@ -524,10 +575,10 @@ example.com [2600:1408:ec00:36::1736:7f31]に ping を送信しています 32 �
     <!-- 最下部固定 -->
     <header>
         <div class="logo">
-            <a href="../index.html?v=1.0.6c"><img src="../image/suna_white_hacker.PNG" alt="Suna_Rust logo" draggable="false"></a>
+            <a href="../index.html?v=1.0.9"><img src="../image/suna_white_hacker.PNG" alt="Suna_Rust logo" draggable="false"></a>
         </div>
     </header>
 
-    <script src="../js/main.js?v=1.0.6c"></script>
+    <script src="../js/main.js?v=1.0.9"></script>
 </body>
 </html>
