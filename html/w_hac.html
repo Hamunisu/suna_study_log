@@ -511,8 +511,8 @@ example.com [2600:1408:ec00:36::1736:7f31]に ping を送信しています 32 �
 example.com [2600:1406:bc00:53::b81e:94c8] へのルートをトレースしています
 経由するホップ数は最大 30 です:
 
-  1    ＜1 ms    ＜1 ms    ＜1 ms  2400:2650:9141:8100:1111:1111:1111:1111
-  2     2 ms     1 ms     1 ms  2400:2650:9141:8100:3ae0:8eff:feef:c465
+  1    ＜1 ms    ＜1 ms    ＜1 ms
+  2     2 ms     1 ms     1 ms
   3     *        *        *     要求がタイムアウトしました。
   4     *        *        *     要求がタイムアウトしました。
   5     *        *        *     要求がタイムアウトしました。
@@ -538,6 +538,17 @@ example.com [2600:1406:bc00:53::b81e:94c8] へのルートをトレースして�
                         <span class="plus">-sSなど"-s"から始まるもののみ使用可能
                         </span>
                     </p>
+            </div>
+            
+            <div class="info">
+                <p class="ore_text">-s系</p>
+
+                    <p>-sS: SYNスキャン（Stealthスキャン）　SYNパケットだけ送信するため接続せずにポートの開閉状態を調べる　<span class="ore_line">一番使われるもの</span>
+                        <br>-sT: TCP接続スキャン　OSの通常のTCP接続を使う　ログに残りやすく検知されやすい　<span class="ore_line">管理者権限が不要</span>
+                        <span class="plus">
+                        </span>
+                    </p>
+            </div>
 
 <!-- 注意 -->
             <div class="info">

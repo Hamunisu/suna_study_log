@@ -307,9 +307,9 @@ fn main() {
             println!("２：挑発する：20ダメージ\n");
             println!("３：逃げる：０ダメージ（終了）\n");
         };
-                        
+
         let mut user_input = String::new();
-                    
+
         io::stdin()
         .read_line( &mut user_input)
         .expect("読み込みに失敗しました");
@@ -321,7 +321,7 @@ fn main() {
                 continue;
             }
         };
-                    
+         
         if user_input == 1 {
             println!("\n剣で攻撃した！\nてきに50のダメージ！\n");
             e_hp -=50;
@@ -330,9 +330,9 @@ fn main() {
         else if user_input == 2 {
             println!("\n挑発をした！\nてきに20のダメージ！\n");
             e_hp -=20;
-        
+
         }
-                        
+               
         else if  user_input == 3 {
             println!("あなたは逃げ出した！\n");
             break;
@@ -341,13 +341,13 @@ fn main() {
             println!("\n*１か２か３を入力して！*\n");
             continue;
         }
-                        
+      
         if e_hp <= 0{
             println!("てきがたおれた！\n");
             println!("おめでとう！");
             break;
         }
-                        
+          
         else {
             println!("てきの残りHPは{}だ！\n",e_hp);
         }
@@ -456,7 +456,7 @@ fn main() {
 
     println!("\n四則演算子を入力してください\n");
 
-    
+
     io::stdin()
     .read_line(&mut _operators)
     .expect("E00003：入力を読み込めませんでした");

@@ -11,7 +11,7 @@ html {
 }
 
 @font-face {
-  font-family: 'HonokaMincho'; /* 任意の名前 */
+  font-family: 'HonokaMincho';
   src: url('../font/Honoka_Shin_Mincho_L.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
@@ -133,8 +133,8 @@ header {
     z-index: 3;
 
     display: flex;
-    justify-content: center; /* 横方向中央揃え */
-    align-items: center;     /* 縦方向中央揃え */
+    justify-content: center;
+    align-items: center;
 }
 
 .logo {
@@ -241,5 +241,9 @@ header {
     width: 20%;
     margin: 0;
   }
+
+  .gray p{
+  font-size: 8px;
+}
 
 }
