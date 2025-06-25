@@ -30,7 +30,6 @@
 .main_box {
     width: 65%;
     height: auto;
-    margin-bottom: 210px;
 }
 
 .sub {
@@ -45,10 +44,6 @@
 a {
     text-decoration: none;
     color: #b1a47a;
-}
-
-.ore_line{
-    text-decoration: underline solid 2.5px orange;
 }
 
 .command-box {

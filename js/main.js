@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const pre = block.parentElement;
 
     const button = document.createElement('button');
-    button.innerText = '📋 copy';
+    button.innerText = '📋 COPY';
     button.className = 'copy-button';
 
     button.addEventListener('click', () => {
@@ -23,11 +23,11 @@ document.addEventListener('DOMContentLoaded', function () {
       text = filteredLines.join('\n');
 
       navigator.clipboard.writeText(text).then(() => {
-        button.textContent = 'copied';
-        setTimeout(() => { button.textContent = '📋 copy'; }, 1500);
+        button.textContent = 'COPIED';
+        setTimeout(() => { button.textContent = '📋 COPY'; }, 1500);
       }).catch(() => {
         button.textContent = '失敗';
-        setTimeout(() => { button.textContent = '📋 copy'; }, 1500);
+        setTimeout(() => { button.textContent = '📋 COPY'; }, 1500);
       });
     });
 

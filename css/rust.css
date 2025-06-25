@@ -15,7 +15,6 @@ body {
 .all {
     width: 59%;
     height: auto;
-    margin-bottom: 200px;
 }
 
 .main_box {
@@ -68,12 +67,13 @@ body {
 }
 
 pre {
-    position: relative;
-    width: 100%;
-    overflow-x: auto;
-    background-color: #2d2d2d;
-    padding: 1em;
-    border-radius: 8px;
+  position: relative;
+  overflow-x: auto;
+  padding: 1em;
+  border-radius: 8px;
+  background-color: #2d2d2d;
+  color: #fff;
+  box-sizing: border-box;
 }
 
 .copy-button {
@@ -89,6 +89,7 @@ pre {
   border-radius: 3px;
   opacity: 0.8;
   transition: opacity 0.3s;
+  z-index: 1;
 }
 
 .copy-button:hover {
