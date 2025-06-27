@@ -59,6 +59,12 @@ html {
 
 }
 
+.section-box p {
+  display: block;
+  color: #f8c555;
+  font-size: 40px;
+}
+
 .section-box a {
     display: block;
     padding: 15px;
@@ -166,6 +172,11 @@ header {
     margin: 0;
 }
 
+
+
+
+
+/* タブレットモード（仮） */
 @media (max-width: 1300px) and (min-width: 601px) {
     html, body {
     margin: 0;
@@ -182,6 +193,10 @@ header {
     margin: 0;
   }
 }
+
+
+
+
 
 /* スマホモード */
 @media (max-width: 600px) {
@@ -216,8 +231,13 @@ header {
   }
   
   .section-box  {
-      width: 100%;
+      width: 90%;
   }
+
+  .section-box p {
+    font-size: 22px;
+  }
+
   .section-box a {
       font-size: 20px;
   }
@@ -246,7 +266,7 @@ header {
   }
 
   .logo img {
-    width: 20%;
+    width: 16%;
     margin: 0;
   }
 

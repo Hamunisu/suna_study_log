@@ -164,7 +164,6 @@ h2.mean {
 
 
 @media (max-width: 600px) {
-
     .top h1 {
         font-size: 200%;
     }
@@ -175,6 +174,7 @@ h2.mean {
     }
 
     h1 {
+        margin: 25px 0;
         font-size: 30px;
     }
 
@@ -184,7 +184,7 @@ h2.mean {
 
     .container {
         flex-grow: 0;
-        width: 100%;
+        width: 95%;
         gap: 0%;
     }
 
@@ -193,7 +193,9 @@ h2.mean {
         min-width: 0px;
         height: 200px;
         margin: 1% 0;
+        border-right: none;
         border-top: solid 4px #ccc;
+
     }
 
     .box h2 {

@@ -14,16 +14,16 @@
 
     <!-- CSS -->
     <link rel="stylesheet" href="https://unpkg.com/ress@5.0.2/dist/ress.min.css">
-    <link rel="stylesheet" href="css/style.css?v=1.0.9">
-    <link rel="stylesheet" href="test.css">
+    <link rel="stylesheet" href="../css/style.css?v=1.1.0">
+    <link rel="stylesheet" href="../css/rust_info.css?v=1.1.0">
 
     <!-- ファビコン -->
-    <link rel="icon" type="image/png" href="image/r_favicon/favicon-96x96.png" sizes="96x96" />
-    <link rel="icon" type="image/svg+xml" href="image/r_favicon/favicon.svg" />
-    <link rel="shortcut icon" href="image/r_favicon/favicon.ico" />
-    <link rel="apple-touch-icon" sizes="180x180" href="image/r_favicon/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" href="../image/r_favicon/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="../image/r_favicon/favicon.svg" />
+    <link rel="shortcut icon" href="../image/r_favicon/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="../image/r_favicon/apple-touch-icon.png" />
     <meta name="apple-mobile-web-app-title" content="S__Rust" />
-    <link rel="manifest" href="image/r_favicon/site.webmanifest" />
+    <link rel="manifest" href="../image/r_favicon/site.webmanifest" />
 
     <!-- Rustシステム -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet" />
@@ -47,15 +47,7 @@
         <h2>coded by Suna</h2>
 </div>
 
-<h1 class="english">～Hello world編～</h1>
-
-        <div class="code-box">
-        <pre><code class="language-rust">
-fn main() {
-    println!("Hello, world!");
-}</code></pre></div> 
-
-<h2 class="english japanse">用語解説</h2>
+<h1 class="english">～用語解説～</h1>
 
 <!-- 内容コンテナ　フォント対応済み -->
 
@@ -81,59 +73,46 @@ fn main() {
             <h3>便利な省略型　コンパイル時に展開される</h3>
                 <p>"!"がマクロである特徴</p>
         </div> 
-
-    </div>
-</div>
-
-<!-- code解説 -->
-
-<h2 class="english">code解説</h2>
-
-    <div class="main-container japanese">
-    
-    <!-- 整列コンテナ -->
-    <div class="container">
-
-        <div class="box">
-          <h2>fn</h2>
-            <h3>関数定義の合図</h3>
-                <p>functionの略</p>
-        </div>
-
-        <div class="box">
-          <h2>main</h2>
-            <h3>プログラムのエントリーポイント
-                <br>必須アイテム</h3>
-            <p>Boxの名前
-                <br>これを忘れると<span class="red_line">コンパイルエラー</span>になる！
-            </p>
-        </div>
         
         <div class="box">
-          <h2>println!</h2>
-            <h3>標準出力（ターミナル等）に文字列を表示させるマクロ</h3>
-                <p>mainの処理（中身）</p>
-        </div>
+          <h2 class="mean">クレート</h2>
+            <h3>プログラムのBox</h3>
+                <p>フォルダと考えてよい</p>
+        </div> 
+        
+        <div class="box">
+          <h2 class="mean">ライブラリ</h2>
+            <h3>lib.rsのこと</h3>
+                <p>自分のコードで使い方を足せば動く　パーツコード
+                    <br>lib.rs: パーツの説明書・中身</p>
+        </div> 
+        
+        <div class="box">
+          <h2 class="mean"></h2>
+            <h3></h3>
+                <p></p>
+        </div> 
+        
+        <div class="box">
+          <h2 class="mean"></h2>
+            <h3></h3>
+                <p></p>
+        </div> 
+
+
+
+
+
+
+
+
+
+
+
+
+
     </div>
 </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-
 <!-- 最下部固定 -->
         <footer>
             <p class="english">&copy; Sunamayu.</p>
@@ -148,13 +127,13 @@ fn main() {
 
     <header>
         <div class="logo">
-            <a href="html/w_hac.html?v=1.0.9"><img src="image/suna_Rust.png" alt="Suna_Rust logo" draggable="false"></a>
+            <a href="../index.html?v=1.1.0"><img src="../image/suna_Rust.png" alt="Suna_Rust logo" draggable="false"></a>
         </div>
     </header>
     
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-rust.min.js"></script>
-    <script src="js/main.js?v=1.0.9"></script>
+    <script src="../js/main.js?v=1.1.0"></script>
 </body>
 </html>

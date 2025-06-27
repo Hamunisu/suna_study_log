@@ -15,7 +15,7 @@
     <!-- CSS -->
     <link rel="stylesheet" href="https://unpkg.com/ress@5.0.2/dist/ress.min.css">
     <link rel="stylesheet" href="css/style.css?v=1.0.9">
-    <link rel="stylesheet" href="css/rust.css?v1.0.9">
+    <link rel="stylesheet" href="css/rust.css">
 
     <!-- ファビコン -->
     <link rel="icon" type="image/png" href="image/r_favicon/favicon-96x96.png" sizes="96x96" />
@@ -49,35 +49,37 @@
     </div>
 
 
-   
     <div class="content japanese">
         <div class="all">
 
 <!-- セクションメニュー -->
             <div class="section-box">
-                <a href="#1">～Hello world～</a>
-                <a href="#2">～数字あてゲーム作成～</a>
-                <a href="#3">～疑似コマンドゲーム～</a>
+
+                <p>入門編解説</p>
+                <a href="rust_info/code.html">～コード解説～</a>
+                <a href="rust_info/term.html">～用語解説～</a>
+                <!-- <a href="#3">～疑似コマンドゲーム～</a>
                 <a href="#4">～駐車券システム（簡易）～</a>
                 <a href="#5">～ドキュメント内容（テキスト）～</a>
-                <a href="#6">～計算ツール～</a>
+                <a href="#6">～計算ツール～</a> -->
+
+                <br>
+                <p>discord Bot解説</p>
                 <a href="#7">～Discord Bot senerity～</a>
             </div>
 
 <!-- 内容 -->
 <!-- Hello world -->
-
-<section id="1">
-    <div class="title"><a href="#goTop">～Hello World～</a></div>
+        
+    <div class="title"><a href="#goTop">～Hello world～</a></div>
         <div class="code-box">
         <pre><code class="language-rust">
-fn main() {　//fn 関数名(引数: 型)
-    println!("Hello, world!");　//Hello,world!と表示させるマクロ
-}　//メイン関数終了</code></pre></div> 
+fn main() {
+    println!("Hello, world!");
+}</code></pre></div>
 
 
-
-    <div class="info">
+    <!-- <div class="info">
         <p class="word-mean">引数</p>
             <p>（）に引数を記載することで呼び出せる
                 <span class="plus">&str: 不変借用　読み取り専用　軽量　（引数の変数はほかで使用できる）
@@ -110,7 +112,7 @@ fn main() {　//fn 関数名(引数: 型)
                 </span>
             </p>
     </div>
-</section>
+</section> -->
 
 <!-- 数字あてゲーム作成 -->
 
@@ -159,7 +161,7 @@ fn main() {
 }</code></pre></div>
 
 
-    <div class="info">
+    <!-- <div class="info">
         <p class="word">use</p>
             <p>準備段階　クレート・モジュールの中を使いますよと宣言するもの
                 <br><span class="plus">Rustはどこに何がを明示的に宣言する必要がある
@@ -272,7 +274,7 @@ fn main() {
             </p>
     </div>
 
-</section>
+</section> -->
 
 <!-- 疑似コマンドゲーム -->
 
@@ -404,17 +406,17 @@ fn main() {
 
 <!-- ドキュメント内容 -->
 
-<section id="5">
+<!-- <section id="5">
     <div class="title"><a href="#goTop">～ドキュメント内容～</a></div>
         <div class="main ">
-                <!-- <p>スタック：軽量固定容量メモリで高速　スコープ終了時に解放される　ポインタ　長さ　を持っている 
+                <p>スタック：軽量固定容量メモリで高速　スコープ終了時に解放される　ポインタ　長さ　を持っている 
                     <br>　例：Hello = ポインタ & 長さ</p>
                 <p>　-ポインタ：ヒープ内の変数の中身の住所</p>
                 <p>　-長さ：ヒープ内の文字列が何バイトあるのか示す　</p>
                 <p>ヒープ：メモリ容量が変更が可能でstring型などを保管している <br> スタックより容量が大きい</p>
-                </p> -->
+                </p>
     </div>
-</section>
+</section> -->
 
 <!-- 計算ツール -->
 
@@ -501,7 +503,9 @@ if let Err(why) = client.start().await {
 }
 </code></pre></div>
 </section>
-                        
+
+        </div>
+    </div>
             <footer>
                 <p class="english">&copy; Sunamayu.</p>
                 <div class="gray">
@@ -509,8 +513,6 @@ if let Err(why) = client.start().await {
                     <p>掲載しているプログラムの利用により生じた不具合や損害については、一切の責任を負いかねます。</p>
                 </div>
             </footer>
-        </div>
-    </div>
 
     
     <!-- 最下部固定 -->

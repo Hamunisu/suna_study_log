@@ -6,6 +6,7 @@ body {
 
 .content {
     display: flex;
+    flex-direction: column;
     width: 100%;
     height: auto;
     justify-content: center;
@@ -13,8 +14,10 @@ body {
 }
 
 .all {
-    width: 59%;
+    width: 60%;
     height: auto;
+    justify-content: center;
+    align-items: center;
 }
 
 .main_box {
@@ -97,10 +100,27 @@ pre {
 }
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 @media (max-width: 600px) {
     .all {
         margin-bottom: 30%;
-        width: 100%;
+        width: 90%;
     }
 
     .main p {
