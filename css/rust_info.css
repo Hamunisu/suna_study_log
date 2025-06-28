@@ -194,8 +194,7 @@ h2.mean {
         height: 200px;
         margin: 1% 0;
         border-right: none;
-        border-top: solid 4px #ccc;
-
+        border-top: solid 1.5px #ccc;
     }
 
     .box h2 {
