@@ -1,7 +1,7 @@
 @charset "UTF-8";
 
 body {
-  background-color: rgb(255, 241, 217);
+  background-color: rgb(255, 247, 233);
 }
 
 .content {
@@ -47,20 +47,6 @@ body {
     margin-bottom: 40px;
     font-size: 20px;
 }
-
-.info .word {
-    font-size: 35px;
-    display: block;
-    text-align: center;
-    margin: 10px auto 0;
-    color: #8265B1;
-} 
-
-.info p.word-mean {
-    color: #77879a;
-    font-size: 30px;
-}
-
 
 .code-box {
     display: flex;
@@ -138,23 +124,4 @@ pre {
         padding-top: 23px;
         font-size: 100%;
     }
-
-
-    
-    .info p{
-        font-size: 20px;
-    }
-    
-    .info p.word {
-        font-size: 25px;
-    }
-    
-    .info p.word-mean {
-        font-size: 25px;
-    }
-
-    .info .plus {
-        font-size: 13px;
-    }
-
 }

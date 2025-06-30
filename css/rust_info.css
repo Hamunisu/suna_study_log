@@ -1,7 +1,7 @@
  @charset "UTF-8";
 
  body {
-    background-color: rgb(255, 241, 217);
+    background-color: rgb(255, 247, 233);
 }
 
 .top h1 {
@@ -24,7 +24,7 @@ h1 {
     text-align: center;
     font-weight: normal;
     font-size: 50px;
-    color: #2AA9A9;
+    color: #FF9E80;
 }
 
 h2 {

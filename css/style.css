@@ -33,7 +33,7 @@ html {
     left: 0;
     height: 20%;
     background-color: #2d2d2d;
-    justify-content: center;  /* 横方向中央寄せ */
+    justify-content: center;
     align-items: center;
 }
 
@@ -45,7 +45,7 @@ html {
 
 .title a {
     font-size: 40px;
-    color: #2AA9A9;
+    color: #FF9E80;
     text-decoration: none;
 }
 
@@ -61,7 +61,7 @@ html {
 
 .section-box p {
   display: block;
-  color: #f8c555;
+  color: #8DA48F;
   font-size: 40px;
 }
 
@@ -69,7 +69,7 @@ html {
     display: block;
     padding: 15px;
     font-size: 30px;
-    color: #212d5d;
+    color: #3C4F5C;
     text-decoration: none;
 }
 
@@ -121,7 +121,7 @@ p.red_text {
 footer {
     width: 100%;
     height: auto;
-    padding-top: 45px;
+    margin-top: 100px;
     padding-bottom: 210px;
     text-align: center;
     border-top:  solid 2px #ccc;
@@ -171,10 +171,6 @@ header {
     width: 5%;
     margin: 0;
 }
-
-
-
-
 
 /* タブレットモード（仮） */
 @media (max-width: 1300px) and (min-width: 601px) {
