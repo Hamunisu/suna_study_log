@@ -11,11 +11,10 @@ document.addEventListener('DOMContentLoaded', function () {
 
       let lines = text.split('\n');
 
-      // 各行について、行の中の // 以降を削除（空白除去はしない）
       let filteredLines = lines.map(line => {
         const index = line.indexOf('//');
         if (index !== -1) {
-          return line.slice(0, index).replace(/\s+$/, ''); // コメント前の空白は削除
+          return line.slice(0, index).replace(/\s+$/, '');
         }
         return line;
       });
