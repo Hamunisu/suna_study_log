@@ -20,6 +20,11 @@ body {
     align-items: center;
 }
 
+.discord {
+    font-size: 37px!important;
+    color: #5865f2!important;
+}
+
 .main_box {
     width: 65%;
     height: auto;
