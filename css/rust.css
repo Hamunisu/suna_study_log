@@ -1,7 +1,7 @@
 @charset "UTF-8";
 
 body {
-  background-color: rgb(255, 247, 233);
+    background-color: #fff;
 }
 
 .content {
@@ -13,6 +13,14 @@ body {
     align-items: center;
 }
 
+
+.section-box .orenge-txt a{
+  display: block;
+  padding-top: 30px;
+  color: #ffb888;
+  font-size: 40px;
+}
+
 .all {
     width: 60%;
     height: auto;
@@ -22,7 +30,7 @@ body {
 
 .discord {
     font-size: 37px!important;
-    color: #5865f2!important;
+    color: #8f99ff!important;
 }
 
 .main_box {
@@ -35,7 +43,8 @@ body {
     padding-top: 15px;
     font-size: 475%;
     text-align: center;
-    color: white;
+    font-weight: normal;
+    color: #cacaca;
 }
 
 .top h2 {
@@ -128,5 +137,9 @@ pre {
     .top h2 {
         padding-top: 23px;
         font-size: 100%;
+    }
+
+    .discord {
+        font-size: 22px!important;
     }
 }
