@@ -150,35 +150,6 @@ h2.mean {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 @media (max-width: 600px) {
     .top h1 {
         font-size: 200%;
@@ -206,7 +177,7 @@ h2.mean {
     }
 
     .box {
-        width: 80%;
+        width: 90%;
         min-width: 0px;
         height: 275px;
         margin: 1% 0;

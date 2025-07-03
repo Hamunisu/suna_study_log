@@ -71,12 +71,13 @@
 <!-- Hello world -->
 
 <section id="1">
-    <div class="title"><a href="#goTop">～Hello world～</a></div>
-        <div class="code-box">
-        <pre><code class="language-rust">
+    <div class="info glass">
+        <div class="title"><a href="#goTop">～Hello world～</a></div>
+            <div class="code-box">
+            <pre><code class="language-rust">
 fn main() {
     println!("Hello, world!");
-}</code></pre></div>
+}</code></pre></div></div>
 
 
     <!-- <div class="info">
@@ -102,9 +103,10 @@ fn main() {
 <!-- 数字あてゲーム作成 -->
 
 <section id="2">
-    <div class="title"><a href="#goTop">～数字あてゲーム作成～</a></div>
-        <div class="code-box">
-        <pre><code class="language-rust">
+    <div class="info glass">
+        <div class="title"><a href="#goTop">～数字あてゲーム作成～</a></div>
+            <div class="code-box">
+            <pre><code class="language-rust">
 //準備段階
 use rand::Rng;　//例：randフォルダを呼び出しその中のRngフォルダを参照するように指示している
 use std::cmp::Ordering;//stdはRustの標準ライブラリでordering（比較）を使えるようになる
@@ -143,7 +145,7 @@ fn main() {
             }
         }
     }
-}</code></pre></div>
+}</code></pre></div></div>
 
     <!-- <div class="info">
         <p class="word">use</p>
@@ -262,9 +264,10 @@ fn main() {
 <!-- 疑似コマンドゲーム -->
 
 <section id="3">
-    <div class="title"><a href="#goTop">～疑似コマンドゲーム～</a></div>
-        <div class="code-box">
-        <pre><code class="language-rust">
+    <div class="info glass">
+        <div class="title"><a href="#goTop">～疑似コマンドゲーム～</a></div>
+            <div class="code-box">
+            <pre><code class="language-rust">
 use rand::Rng;
 use std::io;
 
@@ -326,15 +329,16 @@ fn main() {
             println!("てきの残りHPは{}だ！\n",e_hp);
         }
     }
-}</code></pre></div>
+}</code></pre></div></div>
 </section>
 
 <!-- 駐車券システム（簡易版） -->
 
 <section id="4">
-    <div class="title"><a href="#goTop">～駐車券システム（簡易版）～</a></div>
-        <div class="code-box">
-        <pre><code class="language-rust">
+    <div class="info glass">
+        <div class="title"><a href="#goTop">～駐車券システム（簡易版）～</a></div>
+            <div class="code-box">
+            <pre><code class="language-rust">
 use std::io;
 fn main() {
 
@@ -384,7 +388,7 @@ fn main() {
 
         break;
     }
-}</code></pre></div>
+}</code></pre></div></div>
 </section>
 
 <!-- ドキュメント内容 -->
@@ -404,9 +408,10 @@ fn main() {
 <!-- 計算ツール -->
 
 <section id="6">
-    <div class="title"><a href="#goTop">～計算ツール～</a></div>
-            <div class="code-box">
-                <pre><code class="language-rust">
+    <div class="info glass">
+        <div class="title"><a href="#goTop">～計算ツール～</a></div>
+                <div class="code-box">
+                    <pre><code class="language-rust">
 use std::io;
 
 fn main() {
@@ -458,15 +463,16 @@ fn main() {
 
     println!("A. {}",result);
 
-}</code></pre></div>
+}</code></pre></div></div>
 </section>
 
 <!-- discord senerity まとめパック -->
 
 <section id="d">
-    <div class="title"><a class="discord" href="#goTop">discord bot senerity まとめパック</a></div>
-        <div class="code-box">
-        <pre><code class="language-rust">
+    <div class="info glass">
+        <div class="title"><a class="discord" href="#goTop">discord bot senerity まとめパック</a></div>
+            <div class="code-box">
+            <pre><code class="language-rust">
 let token = env::var("DISCORD_TOKEN").expect("TOKEN not found");
     //.envに書いたトークンを呼び出すorエラー処理
 
@@ -484,7 +490,7 @@ let mut client = Client::builder(&token, intents)
 if let Err(why) = client.start().await {
     println!("Client error: {:?}", why);
 }
-</code></pre></div>
+</code></pre></div></div>
 </section>
 
         </div>
@@ -499,7 +505,7 @@ if let Err(why) = client.start().await {
 
     <footer>
         <p class="english">&copy; Sunamayu.</p>
-        <div class="gray">
+        <div class="gray japanese">
             <p>本ページは個人によるRustプログラミング技術の習得を目的としています。</p>
             <p>掲載しているプログラムの利用により生じた不具合や損害については、一切の責任を負いかねます。</p>
         </div>

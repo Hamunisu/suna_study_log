@@ -32,48 +32,6 @@
     height: auto;
 }
 
-.info {
-  display: block;
-  margin: 45px 0;
-  padding: 20px 0;
-  text-align: center;
-  transition: transform 0.3s ease;
-}
-
-.info:hover {
-  transform: scale(1.05);
-  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
-}
-
-
-.info p{
-  font-size: 25px;
-  padding: 20px 0;
-  pointer-events: none;
-  color: #888;
-  padding: 25px;
-}
-
-.info p.ore_text {
-  color: orange;
-  font-size: 40px;
-}
-
-.info p.red_text {
-  color: red;
-  font-size: 40px;
-}
-
-.info .plus {
-  font-size: 21px;
-  display: block;
-  text-align: center;
-  border-top: 1px dashed #2d2d2d;
-  width: 80%;
-  margin: 10px auto;
-  padding-top: 20px;  
-}
-
 .sub {
     text-align: center;
     font-size: 25px;
@@ -89,7 +47,7 @@ a {
 }
 
 .command-box {
-    margin: 30px auto;
+    margin: 25px auto 45px;
     width: 75%;
     font-family: 'Cascadia Mono', Consolas, 'Courier New', monospace;
     background-color: #1e1e1e;
@@ -105,14 +63,8 @@ a {
 .command-box p {
     text-align: left;
     font-size: 20px;
+    color: #fff;
 }
-
-
-
-
-
-
-
 
 
 
@@ -129,6 +81,10 @@ a {
     }
 }
 
+
+
+
+
 @media (max-width: 600px) {
     .all {
         margin-bottom: 30%;
@@ -144,25 +100,9 @@ a {
     }
 
     .main_box {
-        width: 85%;
+        width: 90%;
         height: auto;
         margin-bottom: 100px;
-    }
-
-    .info p{
-        font-size: 16px;
-    }
-  
-    .info p.ore_text {
-        font-size: 25px;
-    }
-  
-    .info p.red_text {
-        font-size: 25px;
-    }
-
-    .info .plus {
-        font-size: 13px;
     }
 
     .sub {
