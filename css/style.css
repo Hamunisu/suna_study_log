@@ -17,7 +17,6 @@ html {
   font-style: normal;
 }
 
-
 .japanese {
   font-family: 'HonokaMincho', serif;
 }
@@ -27,42 +26,48 @@ html {
     font-optical-sizing: auto;
 }
 
-.top {
-  display: flex;
-  width: 100%;
-  left: 0;
-  height: 20%;
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
-  justify-content: center;
-  align-items: center;
-}
+/* ガラス風 */
 
-.title {
-    margin: 180px 0 45px 0;
-    text-align: center;
-
-}
-
-.title a {
-    font-size: 40px;
-    color: #ffb888;
-    text-decoration: none;
-}
-
-.section-box {
-  margin: 30px auto;
-  width: 65%;
-  height: auto;
+.glass {
   background: rgba(255, 255, 255, 0.3);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
   border-radius: 45px;
-  text-align: center;
+}
 
+/* 上部固定 */
+
+.top {
+  display: flex;
+  width: 100%;
+  left: 0;
+  height: 20%;
+  justify-content: center;
+  align-items: center;
+}
+
+.title {
+  margin: 180px 0 45px 0;
+  text-align: center;
+  border-radius: 45px;
+}
+
+.title a {
+  font-size: 40px;
+  color: #ffb888;
+  text-decoration: none;
+  padding: 10px 20px;
+}
+
+/* 選択BOX */
+
+.section-box {
+  margin: 30px auto;
+  width: 65%;
+  height: auto;
+  border-radius: 45px;
+  text-align: center;
 }
 
 .section-box a {
@@ -89,51 +94,19 @@ section {
   scroll-margin-top: 70px;
 }
 
-.info {
-  display: block;
-  padding: 20px 0;
-  text-align: center;
-  border-bottom: solid 2px #2d2d2d;
-}
-
-.info p{
-  font-size: 27px;
-  padding: 20px 0;
-}
-
-p.ore_text {
-  color: orange;
-  font-size: 40px;
-}
-
-p.red_text {
-  color: red;
-  font-size: 40px;
-}
-
 .ore_line{
   text-decoration: underline solid 2.5px orange;
 }
 
 .red_line{
-  text-decoration: underline solid 2.5px red;
+  text-decoration: underline solid 1px red;
 }
 
-.info .plus {
-  font-size: 21px;
-  display: block;
-  text-align: center;
-  border-top: 1px dashed #2d2d2d;
-  width: 80%;
-  margin: 10px auto;
-  padding-top: 20px;  
-}
-
-/* 最下部固定 */
 footer {
   width: 100%;
   height: auto;
   margin-top: 100px;
+  padding-top: 35px;
   padding-bottom: 210px;
   text-align: center;
   border-top:  solid 2px #ccc;
@@ -157,10 +130,6 @@ header {
   left: 0;
   border-top-left-radius: 45px;
   border-top-right-radius: 45px;
-  background: rgba(255, 255, 255, 0.15);
-  backdrop-filter: blur(9px);
-  -webkit-backdrop-filter: blur(10px);
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
   z-index: 3;
   display: flex;
   justify-content: center;
@@ -246,31 +215,8 @@ header {
       width: 90%;
   }
 
-  .section-box p {
-    font-size: 22px;
-  }
-
   .section-box a {
-      font-size: 20px;
-  }
-
-
-  
-  .info p{
-      font-size: 20px;
-  }
-  
-  .info p.ore_text {
-      font-size: 25px;
-  }
-  
-  .info p.red_text {
-      font-size: 25px;
-  }
-
-  
-  .info .plus {
-      font-size: 13px;
+      font-size: 18px;
   }
 
   footer {
@@ -283,7 +229,7 @@ header {
   }
 
   .gray p{
-  font-size: 8px;
-}
+    font-size: 8px;
+  }
 
 }

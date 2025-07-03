@@ -13,19 +13,16 @@ body {
     align-items: center;
 }
 
-
-.section-box .orenge-txt a{
-  display: block;
-  padding-top: 30px;
-  color: #ffb888;
-  font-size: 40px;
-}
-
 .all {
     width: 60%;
     height: auto;
     justify-content: center;
     align-items: center;
+}
+
+.orenge-txt{
+    font-size: 37px!important;
+    color: #ffb888;
 }
 
 .discord {
@@ -137,6 +134,10 @@ pre {
     .top h2 {
         padding-top: 23px;
         font-size: 100%;
+    }
+
+    .orenge-txt {
+        font-size: 25px!important;
     }
 
     .discord {

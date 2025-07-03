@@ -14,16 +14,16 @@
 
     <!-- CSS -->
     <link rel="stylesheet" href="https://unpkg.com/ress@5.0.2/dist/ress.min.css">
-    <link rel="stylesheet" href="../css/style.css?v=1.1.3">
-    <link rel="stylesheet" href="../css/rust_info.css?v=1.1.3">
+    <link rel="stylesheet" href="../css/style.css?v=1.1.4">
+    <link rel="stylesheet" href="../css/rust_info.css?v=1.1.4">
 
     <!-- ファビコン -->
-    <link rel="icon" type="image/png" href="../image/r_favicon/favicon-96x96.png" sizes="96x96" />
-    <link rel="icon" type="image/svg+xml" href="../image/r_favicon/favicon.svg" />
-    <link rel="shortcut icon" href="../image/r_favicon/favicon.ico" />
-    <link rel="apple-touch-icon" sizes="180x180" href="../image/r_favicon/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" href="image/r_favicon/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="image/r_favicon/favicon.svg" />
+    <link rel="shortcut icon" href="image/r_favicon/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="image/r_favicon/apple-touch-icon.png" />
     <meta name="apple-mobile-web-app-title" content="S__Rust" />
-    <link rel="manifest" href="../image/r_favicon/site.webmanifest" />
+    <link rel="manifest" href="image/r_favicon/site.webmanifest" />
 
     <!-- Rustシステム -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet" />
@@ -42,9 +42,9 @@
 
 <body>
 
-<div class="top japanese">
-        <h1>Rust Study Log </h1>
-        <h2>coded by Suna</h2>
+<div class="top glass japanese">
+    <h1>Rust Study Log </h1>
+    <h2>coded by Suna</h2>
 </div>
 
 <h1 class="mean english">～用語解説～</h1>
@@ -52,52 +52,59 @@
 <!-- 内容コンテナ　フォント対応済み -->
 
 <div class="main-container japanese">
-    
-    <!-- 整列コンテナ -->
-    <div class="container">
-  
-        <div class="box">
-          <h2 class="mean">関数</h2>
-            <h3>処理をひとつにまとめて名前をつけたもの</h3>
-                <p>Boxの名前</p>
-        </div>
 
-        <div class="box">
-          <h2 class="mean">処理</h2>
-            <h3>関数内で行う一連の命令や計算のこと</h3>
-            <p>Boxの中身</p>
-        </div>
+<!-- 整列コンテナ -->
+
+<div class="container">
+
+    <div class="box glass">
+      <h2 class="mean">関数</h2>
+        <h3>処理をひとつにまとめて名前をつけたもの</h3>
+            <p>Boxの名前</p>
+    </div>
+
+    <div class="box glass">
+      <h2 class="mean">処理</h2>
+        <h3>関数内で行う一連の命令や計算のこと</h3>
+          <p>Boxの中身</p>
+    </div>
+
+      <div class="box glass">
+        <h2 class="mean">マクロ</h2>
+          <h3>便利な省略型　コンパイル時に展開される</h3>
+            <p>"!"がマクロである特徴</p>
+      </div> 
         
-        <div class="box">
-          <h2 class="mean">マクロ</h2>
-            <h3>便利な省略型　コンパイル時に展開される</h3>
-                <p>"!"がマクロである特徴</p>
-        </div> 
+      <div class="box glass">
+        <h2 class="mean">クレート</h2>
+          <h3>プログラムのBox</h3>
+            <p>フォルダと考えてよい</p>
+      </div> 
         
-        <div class="box">
-          <h2 class="mean">クレート</h2>
-            <h3>プログラムのBox</h3>
-                <p>フォルダと考えてよい</p>
-        </div> 
+      <div class="box glass">
+        <h2 class="mean">ライブラリ</h2>
+          <h3>lib.rsのこと</h3>
+            <p>自分のコードで使い方を足せば動く　パーツコード
+              <br>lib.rs: パーツの説明書・中身</p>
+      </div>
         
-        <div class="box">
-          <h2 class="mean">ライブラリ</h2>
-            <h3>lib.rsのこと</h3>
-                <p>自分のコードで使い方を足せば動く　パーツコード
-                    <br>lib.rs: パーツの説明書・中身</p>
-        </div> 
+      <div class="box glass">
+        <h2 class="mean"></h2>
+          <h3></h3>
+            <p></p>
+      </div> 
         
-        <div class="box">
-          <h2 class="mean"></h2>
-            <h3></h3>
-                <p></p>
-        </div> 
+      <div class="box glass">
+        <h2 class="mean"></h2>
+          <h3></h3>
+            <p></p>
+      </div> 
         
-        <div class="box">
-          <h2 class="mean"></h2>
-            <h3></h3>
-                <p></p>
-        </div> 
+      <div class="box glass">
+        <h2 class="mean"></h2>
+          <h3></h3>
+            <p></p>
+      </div> 
 
 
 
@@ -113,27 +120,31 @@
 
     </div>
 </div>
-<!-- 最下部固定 -->
-        <footer>
-            <p class="english">&copy; Sunamayu.</p>
-            <div class="gray japanese">
-                <p>本ページは個人によるRustプログラミング技術の習得を目的としています。</p>
-                <p>掲載しているプログラムの利用により生じた不具合や損害については、一切の責任を負いかねます。</p>
-            </div>
-        </footer>
 
 
 
 
-    <header>
+
+
+
+    <footer>
+        <p class="english">&copy; Sunamayu.</p>
+        <div class="gray japanese">
+            <p>本ページは個人によるRustプログラミング技術の習得を目的としています。</p>
+            <p>掲載しているプログラムの利用により生じた不具合や損害については、一切の責任を負いかねます。</p>
+        </div>
+    </footer>
+
+
+    <header class="glass">
         <div class="logo">
-            <a href="../index.html?v=1.1.3"><img src="../image/suna_Rust.png" alt="Suna_Rust logo" draggable="false"></a>
+            <a href="../index.html?v=1.1.4"><img src="../image/suna_Rust.png" alt="Suna_Rust logo" draggable="false"></a>
         </div>
     </header>
-    
+
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-rust.min.js"></script>
-    <script src="../js/main.js?v=1.1.3"></script>
+    <script src="../js/main.js?v=1.1.4"></script>
 </body>
 </html>
