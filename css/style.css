@@ -190,15 +190,15 @@ header {
 }
 
 .logo a {
- display: inline-block; /* ← 画像サイズに合わせる */
+ display: inline-block;
   text-align: center;
 }
 
 
 .logo img {
   width: 13%;
-  display: block; /* 余白防止 */
-  margin: 0 auto;  /* 中央寄せ */
+  display: block;
+  margin: 0 auto;
 }
 
 
@@ -290,7 +290,6 @@ header {
 
   .logo img {
     width: 16%;
-    margin: 0;
   }
 
   .gray p{
