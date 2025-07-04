@@ -1,5 +1,7 @@
  @charset "UTF-8";
 
+/* 全体 */
+
 html, body {
   height: 100%;
   margin: 0;
@@ -9,6 +11,12 @@ html, body {
 html {
     scroll-behavior: smooth;
 }
+
+body {
+  background-color: #fff
+}
+
+/* フォント */
 
 @font-face {
   font-family: 'HonokaMincho';
@@ -45,6 +53,7 @@ html {
   height: 20%;
   justify-content: center;
   align-items: center;
+  pointer-events: none;
 }
 
 .title {
@@ -91,7 +100,7 @@ html {
 }
 
 section {
-  scroll-margin-top: 70px;
+  scroll-margin-top: 325px;
 }
 
 /* w_hac&index共通 */
@@ -170,6 +179,7 @@ footer {
 }
 
 header {
+  display: flex;
   position: fixed;
   width: 100%;
   height: 12%;
@@ -177,10 +187,10 @@ header {
   left: 0;
   border-top-left-radius: 45px;
   border-top-right-radius: 45px;
-  z-index: 3;
-  display: flex;
+  
   justify-content: center;
   align-items: center;
+  z-index: 3;
 }
 
 .logo {
@@ -190,33 +200,31 @@ header {
 }
 
 .logo a {
- display: inline-block;
-  text-align: center;
+  display: inline-block;
+  width: 13%;
+  height: auto;
 }
 
 
 .logo img {
-  width: 13%;
+  width: 100%;
   display: block;
   margin: 0 auto;
 }
 
 
 /* タブレットモード（仮） */
+
 @media (max-width: 1300px) and (min-width: 601px) {
     html, body {
-    margin: 0;
-    padding: 0;
     overflow-x: hidden;
-    width: 100%;
     box-sizing: border-box;
     scroll-behavior: smooth;
   }
   
 
-  .logo img {
+  .logo a {
     width: 10%;
-    margin: 0;
   }
 }
 
@@ -225,20 +233,14 @@ header {
 
 
 /* スマホモード */
+
 @media (max-width: 600px) {
   html, body {
-    margin: 0;
-    padding: 0;
     overflow-x: hidden;
-    width: 100%;
-    box-sizing: border-box;
     scroll-behavior: smooth;
   }
 
   .top {
-    display: flex;
-    width: 100%;
-    left: 0;
     height: 15%;
   }
 
@@ -249,7 +251,6 @@ header {
   .title {
       margin-top: 50px;
       margin-bottom: 20px;
-      text-align: center;
   }
   
   .title a {
@@ -288,7 +289,7 @@ header {
     font-size: 14px;
   }
 
-  .logo img {
+  .logo a {
     width: 16%;
   }
 

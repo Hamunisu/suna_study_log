@@ -1,9 +1,5 @@
  @charset "UTF-8";
 
-body {
-  background-color: #fff;
-}
-
 .top h1 {
     padding-top: 15px;
     font-size: 475%;
@@ -25,6 +21,7 @@ h1 {
     font-weight: normal;
     font-size: 50px;
     color: #ffb888;
+    pointer-events: none;
 }
 
 .mean {
@@ -133,7 +130,6 @@ h2.mean {
     font-size: 20px;
     text-align: center;
     font-weight: normal;
-    pointer-events: none;
 }
 
 .box p {
@@ -143,7 +139,6 @@ h2.mean {
     color: 	#888;
     font-size: 17px;
     text-align: center;
-    pointer-events: none;
 }
 
 

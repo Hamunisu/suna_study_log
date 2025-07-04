@@ -1,9 +1,5 @@
 @charset "UTF-8";
 
-body {
-    background-color: #fff;
-}
-
 .content {
     display: flex;
     flex-direction: column;
@@ -71,7 +67,7 @@ pre {
   position: relative;
   overflow-x: auto;
   padding: 1em;
-  border-radius: 8px;
+  border-radius: 25px;
   background-color: #2d2d2d;
   color: #fff;
   box-sizing: border-box;
