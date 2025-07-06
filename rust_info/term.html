@@ -14,8 +14,8 @@
 
     <!-- CSS -->
     <link rel="stylesheet" href="https://unpkg.com/ress@5.0.2/dist/ress.min.css">
-    <link rel="stylesheet" href="../css/style.css?v=1.1.6">
-    <link rel="stylesheet" href="../css/rust_info.css?v=1.1.6">
+    <link rel="stylesheet" href="../css/style.css?v=1.1.6a">
+    <link rel="stylesheet" href="../css/rust_info.css?v=1.1.6a">
 
     <!-- ファビコン -->
     <link rel="icon" type="image/png" href="image/r_favicon/favicon-96x96.png" sizes="96x96" />
@@ -97,8 +97,8 @@
       </div>
         
       <div class="box glass">
-        <h2 class="mean"></h2>
-          <h3></h3>
+        <h2 class="mean">ヒープメモリ（領域）</h2>
+          <h3>実行中に必要な分だけ自由に確保できるメモリ領域</h3>
             <p></p>
       </div> 
         
@@ -107,6 +107,27 @@
           <h3></h3>
             <p></p>
       </div> 
+
+      
+      <div class="box-hikaku glass">
+        <div class="hikaku-box">
+          <h2 class="mean">ヒープメモリ</h2>
+          <p>メモリサイズを実行時に動的に決める（自由）</p>
+          <p>遅い（予約・解放に時間がかかる）</p>
+          <p>サイズが大きい（多くのデータを持てる）</p>
+          <p>自分で予約・解放して管理する</p>
+          <p>Rustの所有権管理が重要</p>
+        </div>
+
+        <div class="hikaku-box">
+          <h2 class="mean">スタックメモリ</h2>
+          <p>メモリサイズを実行前に静的に決める（固定）</p>
+          <p>速い（自動で処理してくれる）</p>
+          <p>サイズが小さい（少量の一時的データ向き）</p>
+          <p>メモリが自動的に管理してくれる</p>
+          <p>所有権管理の影響を受にくい</p>
+        </div>
+      </div>
         
       <div class="box glass">
         <h2 class="mean"></h2>
@@ -146,13 +167,13 @@
 
     <header class="glass">
         <div class="logo">
-            <a href="../index.html?v=1.1.6"><img src="../image/suna_Rust.png" alt="Suna_Rust logo" draggable="false"></a>
+            <a href="../index.html?v=1.1.6a"><img src="../image/suna_Rust.png" alt="Suna_Rust logo" draggable="false"></a>
         </div>
     </header>
 
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-rust.min.js"></script>
-    <script src="../js/main.js?v=1.1.6"></script>
+    <script src="../js/main.js?v=1.1.6a"></script>
 </body>
 </html>
