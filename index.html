@@ -14,8 +14,8 @@
 
     <!-- CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/modern-normalize@2.0.0/modern-normalize.min.css">
-    <link rel="stylesheet" href="css/style.css?v=1.1.6a">
-    <link rel="stylesheet" href="css/rust.css?v=1.1.6a">
+    <link rel="stylesheet" href="css/style.css?v=1.1.6d">
+    <link rel="stylesheet" href="css/rust.css?v=1.1.6d">
 
     <!-- ファビコン -->
     <link rel="icon" type="image/png" href="image/r_favicon/favicon-96x96.png" sizes="96x96" />
@@ -121,7 +121,7 @@ fn main() {
 
     loop {
     let mut guess = String::new();
-    
+
     io::stdin()　//ioクレート内にあるstdin()を利用する
         .read_line(&mut guess)　//.read_lineで一行を読み込み、&mut guessでguessの中に読み込んだものを入れる
         .expect("入力の読み込みに失敗しました");
@@ -133,7 +133,7 @@ fn main() {
                 continue;
             }
         };
-                    
+
         println!("あなたの予想は{}",guess);
 
         match guess.cmp(&secret_number) {
@@ -280,7 +280,7 @@ fn main() {
                 continue;
             }
         };
-         
+
         if user_input == 1 {
             println!("\n剣で攻撃した！\nてきに50のダメージ！\n");
             e_hp -=50;
@@ -289,9 +289,8 @@ fn main() {
         else if user_input == 2 {
             println!("\n挑発をした！\nてきに20のダメージ！\n");
             e_hp -=20;
-
         }
-               
+
         else if  user_input == 3 {
             println!("あなたは逃げ出した！\n");
             break;
@@ -300,13 +299,13 @@ fn main() {
             println!("\n*１か２か３を入力して！*\n");
             continue;
         }
-      
+
         if e_hp <= 0{
             println!("てきがたおれた！\n");
             println!("おめでとう！");
             break;
         }
-          
+
         else {
             println!("てきの残りHPは{}だ！\n",e_hp);
         }
@@ -336,7 +335,7 @@ fn main() {
         io::stdin()
         .read_line(&mut park_ticket)
         .expect("\n*読み込みに失敗しました*");
-                    
+
         let park_ticket : u32 = match park_ticket.trim().parse() {
             Ok(num) => num,
             Err(_) => {
@@ -410,13 +409,11 @@ fn main() {
 
     println!("\n2つ目の数値を入力してください\n");
 
-
     io::stdin()
     .read_line(&mut _number2)
     .expect("E00002：入力を読み込めませんでした");
 
     println!("\n四則演算子を入力してください\n");
-
 
     io::stdin()
     .read_line(&mut _operators)
@@ -496,13 +493,13 @@ if let Err(why) = client.start().await {
 
     <header class="glass">
         <div class="logo">
-            <a href="html/w_hac.html?v=1.1.6a"><img src="image/suna_Rust.png" alt="Suna_Rust logo" draggable="false"></a>
+            <a href="html/w_hac.html?v=1.1.6d"><img src="image/suna_Rust.png" alt="Suna_Rust logo" draggable="false"></a>
         </div>
     </header>
 
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-rust.min.js"></script>
-    <script src="js/main.js?v=1.1.6a"></script>
+    <script src="js/main.js?v=1.1.6d"></script>
 </body>
 </html>

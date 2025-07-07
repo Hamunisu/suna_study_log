@@ -266,6 +266,10 @@ header {
       font-size: 18px;
   }
 
+  section {
+  scroll-margin-top: 100px;
+}
+
   /* w_hac&index共通 */
 
   .info p{

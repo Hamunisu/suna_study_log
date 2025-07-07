@@ -14,8 +14,8 @@
 
     <!-- CSS -->
     <link rel="stylesheet" href="https://unpkg.com/ress@5.0.2/dist/ress.min.css">
-    <link rel="stylesheet" href="../css/style.css?v=1.1.6a">
-    <link rel="stylesheet" href="../css/rust_info.css?v=1.1.6a">
+    <link rel="stylesheet" href="../css/style.css?v=1.1.6d">
+    <link rel="stylesheet" href="../css/rust_info.css?v=1.1.6d">
 
     <!-- ファビコン -->
     <link rel="icon" type="image/png" href="image/r_favicon/favicon-96x96.png" sizes="96x96" />
@@ -130,6 +130,53 @@
           <p>所有権管理の影響を受にくい</p>
         </div>
       </div>
+
+      <div class="box glass">
+        <h2 class="mean">整数型</h2>
+          <h3>u: 符号なし整数（プラスのみ）
+            <br>i: 符号あり整数（マイナス含む）</h3>
+            <p>使い分けると軽量化ができる
+              <br>Rustは整数で指定しなければ自動的にi32となる
+            </p>
+      </div>
+
+
+      <div class="box glass">
+        <h2 class="mean">浮動小数型</h2>
+          <h3>f: 小数を扱えるようになる</h3>
+            <p>f64が一番万能
+              <br>Rustは小数で指定しなければ自動的にf64となる</p>
+      </div>
+
+      <div class="box glass">
+        <h2 class="point">豆知識！</h2>
+          <h3>2038年問題！</h3>
+            <p>1970年1月1日を基準にi32で時間ができているものは上限の2038年にオーバーフローしてしまう（ログなどが破損）
+              <br><br>Windows,Macなどはすでに対策済み
+            </p>
+      </div>
+
+      <div class="box-hikaku glass">
+        <div class="hikaku-box">
+          <h2 class="mean">u(符号なし)</h2>
+          <p>8ビット: 0～225</p>
+          <p>16ビット: 0～65,535</p>
+          <p class="long-text">32ビット: 0～4,294,867,295</p>
+          <p class="short-text">32ビット: 0～約40億</p>
+          <p class="long-text">64ビット: 0～18,446,744,073,709,551,615</p>
+          <p class="short-text">64ビット: 0～約18京</p>
+        </div>
+
+        <div class="hikaku-box">
+          <h2 class="mean">i(符号あり)</h2>
+          <p>8ビット: -128～127</p>
+          <p >16ビット: -32,768～32,767</p>
+          <p class="long-text">32ビット: -2,147,483,648～2,147,483,647</p>
+          <p class="short-text">32ビット: -約20億～+約20億</p>
+          <p class="long-text">64ビット: -9,223,372,036,854,775,808～9,223,372,036,854,775,807</p>
+          <p class="short-text">64ビット: -約9京～+約9京</p>
+        </div>
+      </div>
         
       <div class="box glass">
         <h2 class="mean"></h2>
@@ -169,13 +216,13 @@
 
     <header class="glass">
         <div class="logo">
-            <a href="../index.html?v=1.1.6a"><img src="../image/suna_Rust.png" alt="Suna_Rust logo" draggable="false"></a>
+            <a href="../index.html?v=1.1.6d"><img src="../image/suna_Rust.png" alt="Suna_Rust logo" draggable="false"></a>
         </div>
     </header>
 
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-rust.min.js"></script>
-    <script src="../js/main.js?v=1.1.6a"></script>
+    <script src="../js/main.js?v=1.1.6d"></script>
 </body>
 </html>
