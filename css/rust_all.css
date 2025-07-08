@@ -41,13 +41,13 @@
 }
 
 pre {
-  position: relative;
-  overflow-x: auto;
-  padding: 1em;
-  border-radius: 25px;
-  background-color: #2d2d2d;
-  color: #fff;
-  box-sizing: border-box;
+    position: relative;
+    overflow-x: auto;
+    padding: 1em;
+    border-radius: 25px;
+    background-color: #2d2d2d;
+    color: #fff;
+    box-sizing: border-box;
 }
 
 .copy-button {
@@ -86,7 +86,7 @@ pre {
         width: 90%;
     }
 
-    pre {
-        width: 95%;
+    .code-box {
+        padding: 0 10px 25px 10px;
     }
 }
