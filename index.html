@@ -14,8 +14,10 @@
 
     <!-- CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/modern-normalize@2.0.0/modern-normalize.min.css">
-    <link rel="stylesheet" href="css/style.css?v=1.1.6d">
-    <link rel="stylesheet" href="css/rust.css?v=1.1.6d">
+    <link rel="stylesheet" href="css/style.css?v=1.2.0">
+    <link rel="stylesheet" href="css/rust.css?v=1.2.0">
+    <link rel="stylesheet" href="css/rust_all.css?v=1.2.0">
+
 
     <!-- ファビコン -->
     <link rel="icon" type="image/png" href="image/r_favicon/favicon-96x96.png" sizes="96x96" />
@@ -59,6 +61,8 @@
             <a href="#1" class="orenge-txt">入門編解説</a>
                 <a href="rust_info/code.html">～コード解説～</a>
                 <a href="rust_info/term.html">～用語解説～</a>
+                <a href="rust_info/toml.html">～Cargo.toml解説～</a>
+                <a href="rust_info/library.html">～ライブラリ解説～</a>
 
                 <br>
             <a href="#d" class="discord">discord bot senerity</a>
@@ -147,15 +151,7 @@ fn main() {
     }
 }</code></pre></div></div>
     
-    <!-- <div class="info">
-        <p class="word">loop</p>
-            <p>この中の処理は条件なしに"永遠"繰り返される
-                <br><span class="plus">breakを使用することで抜け出せる
-                </span>
-            </p>
-    </div>
-    
-    <div class="info">
+    <!--<div class="info">
         <p class="word">String::new()</p>
             <p>空のString型を生成する
                 <br><span class="plus">中身は""である
@@ -374,17 +370,14 @@ fn main() {
 
 <!-- ドキュメント内容 -->
 
-<!-- <section id="5">
+<!--
     <div class="title"><a href="#goTop">～ドキュメント内容～</a></div>
         <div class="main ">
                 <p>スタック：軽量固定容量メモリで高速　スコープ終了時に解放される　ポインタ　長さ　を持っている 
                     <br>　例：Hello = ポインタ & 長さ</p>
                 <p>　-ポインタ：ヒープ内の変数の中身の住所</p>
                 <p>　-長さ：ヒープ内の文字列が何バイトあるのか示す　</p>
-                <p>ヒープ：メモリ容量が変更が可能でstring型などを保管している <br> スタックより容量が大きい</p>
-                </p>
-    </div>
-</section> -->
+    </div> -->
 
 <!-- 計算ツール -->
 
@@ -493,13 +486,13 @@ if let Err(why) = client.start().await {
 
     <header class="glass">
         <div class="logo">
-            <a href="html/w_hac.html?v=1.1.6d"><img src="image/suna_Rust.png" alt="Suna_Rust logo" draggable="false"></a>
+            <a href="html/w_hac.html?v=1.2.0"><img src="image/suna_Rust.png" alt="Suna_Rust logo" draggable="false"></a>
         </div>
     </header>
 
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-rust.min.js"></script>
-    <script src="js/main.js?v=1.1.6d"></script>
+    <script src="js/main.js?v=1.2.0"></script>
 </body>
 </html>

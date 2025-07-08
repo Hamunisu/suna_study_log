@@ -1,20 +1,5 @@
  @charset "UTF-8";
 
-.top h1 {
-    padding-top: 15px;
-    font-size: 475%;
-    text-align: center;
-    color: #cacaca;
-}
-
-.top h2 {
-    padding-top: 45px;
-    padding-left: 2%;
-    font-size: 350%;
-    text-align: center;
-    color: #ccc;
-}
-
 h1 {
     margin: 50px 0;
     text-align: center;
@@ -35,46 +20,6 @@ h2 {
     font-size: 35px;
     color: #a8a8a8;
 }
-
-/* コマンドボックス */
-.code-box {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-}
-
-pre {
-    width: 60%;
-    position: relative;
-    overflow-x: auto;
-    padding: 1em;
-    border-radius: 8px;
-    background-color: #2d2d2d;
-    color: #fff;
-    box-sizing: border-box;
-}
-
-.copy-button {
-  position: absolute;
-  top: 8px;
-  right: 8px;
-  padding: 4px 8px;
-  font-size: 12px;
-  cursor: pointer;
-  background-color: #444;
-  color: white;
-  border: none;
-  border-radius: 3px;
-  opacity: 0.8;
-  transition: opacity 0.3s;
-  z-index: 10;
-}
-
-.copy-button:hover {
-  opacity: 1;
-}
-/* コマンドボックス /////// */
 
 /* 内容コンテナ */
 .main-container {
@@ -146,7 +91,7 @@ h2.point {
 }
 
 /* 比較用box */
-.box-hikaku {
+.box-large {
   width: 98%;
   height: auto;
   margin: 30px auto;
@@ -156,7 +101,7 @@ h2.point {
   transition: transform 0.3s ease;
 }
 
-.box-hikaku:hover {
+.box-large:hover {
   transform: scale(1.05);
   box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
 }
@@ -187,20 +132,28 @@ h2.point {
   display: none;
 }
 
+/* Cargo.toml用 */
 
+.largein-box {
+  width: 100%;
+}
 
+.largein-box h2 {
+    text-align: center;
+    color: #008080;
+    font-size: 40px;
+}
+
+.largein-box h3 {
+    text-align: center;
+    color: 	#888;
+    font-size: 22px;
+    font-weight: normal;
+    padding: 0 0 20px 0;
+}
 
 
 @media (max-width: 600px) {
-    .top h1 {
-        font-size: 200%;
-    }
-
-    .top h2 {
-        padding-top: 23px;
-        font-size: 100%;
-    }
-
     h1 {
         margin: 25px 0;
         font-size: 30px;
@@ -253,7 +206,11 @@ h2.point {
       display: block;
     }
 
-    pre {
-        width: 95%;
+    .largein-box h2 {
+        font-size: 24px;
+    }
+
+    .largein-box h3 {
+        font-size: 15px
     }
 }
