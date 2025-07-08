@@ -16,6 +16,22 @@
     color: #ccc;
 }
 
+.content {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+}
+
+.all {
+    width: 60%;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+}
+
 .code-box {
     display: flex;
     justify-content: center;
@@ -63,6 +79,11 @@ pre {
     .top h2 {
         padding-top: 23px;
         font-size: 100%;
+    }
+
+    .all {
+        margin-bottom: 30%;
+        width: 90%;
     }
 
     pre {

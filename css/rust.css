@@ -1,21 +1,5 @@
 @charset "UTF-8";
 
-.content {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    height: auto;
-    justify-content: center;
-    align-items: center;
-}
-
-.all {
-    width: 60%;
-    height: auto;
-    justify-content: center;
-    align-items: center;
-}
-
 .orenge-txt{
     font-size: 37px!important;
     color: #ffb888;
