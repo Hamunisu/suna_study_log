@@ -54,104 +54,117 @@
 
 <!-- 内容コンテナ　フォント対応済み -->
 
-    <div class="main-container japanese">
+<div class="main-container japanese">
     
 <!-- 整列コンテナ -->
     
-    <div class="container">
+  <div class="container">
 
-        <div class="box glass">
-          <h2>fn</h2>
-            <h3>関数定義の合図</h3>
-              <p>functionの略</p>
-        </div>
-
-        <div class="box glass">
-          <h2>main</h2>
-            <h3>プログラムのエントリーポイント
-              <br>必須アイテム</h3>
-                <p>boxの名前
-                  <br>これを忘れると<span class="red_line">コンパイルエラー</span>になる！</p>
-        </div>
-        
-        <div class="box glass">
-          <h2>println!</h2>
-            <h3>標準出力（ターミナル等）に文字列を表示させるマクロ</h3>
-              <p>mainの処理（中身）</p>
-        </div>
-        
-        <div class="box glass">
-          <h2>use</h2>
-            <h3>外部のクレートやライブラリなどを呼び出すもの</h3>
-              <p>呼び出せるようにスタンバイさせる
-                <br>クレート内のものを省略して入力できるようになる</p>
-        </div>
-        
-        <div class="box glass">
-          <h2>let</h2>
-            <h3>変数定義するもの</h3>
-              <p>デフォルトは<span class="red_line">不変</span>である
-                <br>let x = 5 と入力する</p>
-        </div>
-        
-        <div class="box glass">
-          <h2>mut</h2>
-            <h3>変数を可変（変更可能）にする</h3>
-              <p>mutable（可変）の略
-                  <br>let mut x = 5と入力する</p>
-        </div>
-        
-        <div class="box glass">
-          <h2>loop</h2>
-            <h3>スコープ内の処理を永久に繰り返す</h3>
-              <p>breakを使用して抜け出せる</p>
-        </div>
-        
-        <div class="box glass">
-          <h2>break</h2>
-            <h3>ループ処理を抜け出すためのもの</h3>
-              <p>例: loop, for, whileで使用可能</p>
-        </div>
-        
-        <div class="box glass">
-          <h2>String</h2>
-            <h3>可変の文字列型</h3>
-              <p>ヒープメモリ（領域）に保存される</p>
-        </div>
-
-        <div class="box glass">
-          <h2>io::stdin()</h2>
-            <h3>io: input/output
-              <br>stdin(): 標準入力を受け取る入口
-            </h3>
-              <p>標準入力: キーボードからの入力のこと</p>
-        </div>
-        <div class="box glass">
-          <h2></h2>
-            <h3></h3>
-              <p></p>
-        </div>
-        <div class="box glass">
-          <h2></h2>
-            <h3></h3>
-              <p></p>
-        </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    <div class="box glass">
+      <h2>fn</h2>
+        <h3>関数定義の合図</h3>
+          <p>functionの略</p>
     </div>
+
+    <div class="box glass">
+      <h2>main</h2>
+        <h3>プログラムのエントリーポイント
+          <br>必須アイテム</h3>
+            <p>boxの名前
+              <br>これを忘れると<span class="red_line">コンパイルエラー</span>になる！</p>
+    </div>
+        
+    <div class="box glass">
+      <h2>println!</h2>
+        <h3>標準出力（ターミナル等）に文字列を表示させるマクロ</h3>
+          <p>mainの処理（中身）</p>
+    </div>
+        
+    <div class="box glass">
+      <h2>use</h2>
+        <h3>外部のクレートやライブラリなどを呼び出すもの</h3>
+          <p>呼び出せるようにスタンバイさせる
+            <br>クレート内のものを省略して入力できるようになる</p>
+    </div>
+        
+    <div class="box glass">
+      <h2>let</h2>
+        <h3>変数定義するもの</h3>
+          <p>デフォルトは<span class="red_line">不変</span>である
+            <br>let x = 5 と入力する</p>
+    </div>
+        
+    <div class="box glass">
+      <h2>mut</h2>
+        <h3>変数を可変（変更可能）にする</h3>
+          <p>mutable（可変）の略
+              <br>let mut x = 5と入力する</p>
+    </div>
+        
+    <div class="box glass">
+      <h2>loop</h2>
+        <h3>スコープ内の処理を永久に繰り返す</h3>
+          <p>breakを使用して抜け出せる</p>
+    </div>
+        
+    <div class="box glass">
+      <h2>break</h2>
+        <h3>ループ処理を抜け出すためのもの</h3>
+          <p>例: loop, for, whileで使用可能</p>
+    </div>
+        
+    <div class="box glass">
+      <h2>String</h2>
+        <h3>可変の文字列型</h3>
+          <p>ヒープメモリ（領域）に保存される</p>
+    </div>
+
+    <div class="box glass">
+      <h2>io::stdin()</h2>
+        <h3>io: input/output
+          <br>stdin(): 標準入力を受け取る入口
+        </h3>
+          <p>標準入力: キーボードからの入力のこと</p>
+    </div>
+
+    <div class="box glass">
+      <h2>Result<T, E></h2>
+        <h3>Rustでは失敗の可能性があるものはこの型で返される</h3>
+          <p>T: 成功したときの型が入っている(指定した型名)
+            <br>E: 失敗したときのエラーが入っている(e)</p>
+    </div>
+
+    <div class="box glass">
+      <h2>panic!</h2>
+        <h3>プログラムを強制終了させるマクロ</h3>
+          <p>ifなどで起きてはならない状況を止めれる
+            <br><span class="red_line">ファイル破損の恐れがある</span>ので使用注意！
+          </p>
+    </div>
+
+    <div class="box glass">
+      <h2>.expect</h2>
+        <h3>成功or失敗の型に対して使用できるメゾット</h3>
+          <p><span class="red_line">Result型</span>と<span class="red_line">panic!</span>を内部で呼び出している
+            <br>簡単に言えばエラーログ</p>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </div>
 </div>
 
 

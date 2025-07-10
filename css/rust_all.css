@@ -16,6 +16,12 @@
     color: #ccc;
 }
 
+
+a {
+    text-decoration: none;
+    color: #778bda;
+}
+
 .content {
     display: flex;
     flex-direction: column;
