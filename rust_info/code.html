@@ -143,11 +143,60 @@
     </div>
 
     <div class="box glass">
-      <h2>.expect</h2>
+      <h2>.expect()</h2>
         <h3>成功or失敗の型に対して使用できるメゾット</h3>
           <p><span class="red_line">Result型</span>と<span class="red_line">panic!</span>を内部で呼び出している
             <br>簡単に言えばエラーログ</p>
     </div>
+
+    <div class="box glass">
+      <h2>.trim()</h2>
+        <h3>文字列の前後の空白・改行をなくすメゾット</h3>
+          <p>String, str型に有効</p>
+    </div>
+
+    <div class="box glass">
+      <h2>.parse()</h2>
+        <h3>文字列をほかの型に変形させるメゾット</h3>
+          <p>"123"を整数123に変形させる
+            <br>エラーハンドリング必須</p>
+    </div>
+
+    <div class="box glass">
+      <h2>match</h2>
+        <h3>値に応じて分岐する<span class="red_line">構文</span></h3>
+          <p>result型に応じて分岐する
+            <br>Ok(T): OKの時の処理
+              <br>Err(e): エラーの時の処理</p>
+    </div>
+
+    <div class="box glass">
+      <h2>Ok(), Err()</h2>
+        <h3>エラーハンドリングの分岐処理
+          <p>Ok() =>: ()内には成功時に格納したい変数を入れる
+            <br>Err(e) =>: ()内にはエラー内容を格納するもの(通常はe)
+          </p>
+    </div>
+
+    <div class="box glass">
+      <h2>if</h2>
+        <h3>条件によって処理を分ける制御構文</h3>
+          <p>条件式はbool型</p>
+    </div>
+
+    <div class="box glass">
+      <h2>else if</h2>
+        <h3>追加の条件分岐を作る構文</h3>
+          <p>if, ifとするとすべての分岐を試してしまう。
+            <br>else ifだと上の分岐に当てはまればその他はスキップされる</p>
+    </div>
+
+    <div class="box glass">
+      <h2>else</h2>
+        <h3>if, else ifに当てはまらなかった条件すべてを処理する構文</h3>
+          <p>安全のために置いておく受け皿</p>
+    </div>
+
 
 
 
