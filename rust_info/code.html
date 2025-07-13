@@ -43,7 +43,7 @@
 
 <body>
 
-<div class="top glass japanese">
+<div class="top glass japanese" onclick="toggleDarkMode()">
         <h1>Rust Study Log </h1>
         <h2>coded by Suna</h2>
 </div>
@@ -114,6 +114,12 @@
     </div>
         
     <div class="box glass">
+      <h2>continue</h2>
+        <h3>今のループ等をスキップして次に行く</h3>
+          <p>例: loop, for, whileで使用可能</p>
+    </div>
+        
+    <div class="box glass">
       <h2>String</h2>
         <h3>可変の文字列型</h3>
           <p>ヒープメモリ（領域）に保存される</p>
@@ -125,6 +131,13 @@
           <br>stdin(): 標準入力を受け取る入口
         </h3>
           <p>標準入力: キーボードからの入力のこと</p>
+    </div>
+
+    <div class="box glass">
+      <h2>.expect()</h2>
+        <h3>成功or失敗の型に対して使用できるメゾット</h3>
+          <p><span class="red_line">Result型</span>と<span class="red_line">panic!</span>を内部で呼び出している
+            <br>簡単に言えばエラーログ</p>
     </div>
 
     <div class="box glass">
@@ -143,13 +156,6 @@
     </div>
 
     <div class="box glass">
-      <h2>.expect()</h2>
-        <h3>成功or失敗の型に対して使用できるメゾット</h3>
-          <p><span class="red_line">Result型</span>と<span class="red_line">panic!</span>を内部で呼び出している
-            <br>簡単に言えばエラーログ</p>
-    </div>
-
-    <div class="box glass">
       <h2>.trim()</h2>
         <h3>文字列の前後の空白・改行をなくすメゾット</h3>
           <p>String, str型に有効</p>
@@ -161,6 +167,13 @@
           <p>"123"を整数123に変形させる
             <br>エラーハンドリング必須</p>
     </div>
+
+    
+      <div class="box glass">
+        <h2 class="point">豆知識！</h2>
+          <h3>メゾット＆パス演算子のあとには必ず()がつく！</h3>
+            <p>パス演算子(::)</p>
+      </div>
 
     <div class="box glass">
       <h2>match</h2>
@@ -197,6 +210,28 @@
           <p>安全のために置いておく受け皿</p>
     </div>
 
+      
+      <div class="box-large glass">
+        <div class="hikaku-box">
+          <h2>比較演算子</h2>
+          <p>==</p>
+          <p>!=</p>
+          <p>></p>
+          <p><</p>
+          <p>>=</p>
+          <p><=</p>
+        </div>
+
+        <div class="hikaku-box">
+          <h2>内容</h2>
+          <p>イコール(等しい)</p>
+          <p>ノットイコール(等しくない)</p>
+          <p>より大きい(大なり)</p>
+          <p>より小さい(小なり)</p>
+          <p>以上</p>
+          <p>以下</p>
+        </div>
+      </div>
 
 
 

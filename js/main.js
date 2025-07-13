@@ -34,3 +34,17 @@ document.addEventListener('DOMContentLoaded', function () {
     pre.appendChild(button);
   });
 });
+
+// ダークモード
+function toggleDarkMode() {
+  document.body.classList.toggle('dark');
+  const isDark = document.body.classList.contains('dark');
+  localStorage.setItem('darkMode', isDark ? 'on' : 'off');
+}
+
+// 初期状態で localStorage を確認し反映
+window.addEventListener('DOMContentLoaded', () => {
+  if (localStorage.getItem('darkMode') === 'on') {
+    document.body.classList.add('dark');
+  }
+});

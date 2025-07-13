@@ -53,7 +53,7 @@ body {
   height: 20%;
   justify-content: center;
   align-items: center;
-  pointer-events: none;
+  cursor: pointer;
 }
 
 .title {
@@ -211,6 +211,47 @@ header {
   display: block;
   margin: 0 auto;
 }
+
+/* ダークモード */
+
+body.dark {
+  background-color: #181818;
+}
+
+
+body.dark .glass {
+  background: rgba(43, 43, 43, 0.3);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+}
+
+body.dark .section-box a {
+  color: #d6d6d6;
+}
+
+body.dark .section-box .orenge-txt{
+  color: #ffb888;
+}
+
+body.dark .info p{
+  color: #d6d6d6;
+}
+
+body.dark .info p.ore_text {
+  color: #ffb888;
+}
+
+body.dark .info p.red_text {
+  color: red;
+}
+
+
+body.dark footer {
+  color: #d6d6d6;
+}
+
+
+
+
 
 /* タブレットモード（仮） */
 

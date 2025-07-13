@@ -62,6 +62,16 @@ a {
     color: #fff;
 }
 
+/* ダークモード */
+
+body.dark .sub {
+    color: #d6d6d6;
+}
+
+body.dark .command-box{
+    background-color: #000;
+}
+
 
 
 

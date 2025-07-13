@@ -56,19 +56,23 @@ h2 {
 }
 
 /* コード解説（ノーマル） */
+
 .box h2 {
     margin-bottom: 20px;
     text-align: center;
-    color: rgb(255, 181, 43);
+    color: #ffb888;
     font-size: 32px;
     pointer-events: none;
 }
 
 /* 用語解説 */
+
 h2.mean {
     color: #8265B1;
 }
+
 /* 豆知識 */
+
 h2.point {
     color: rgb(168, 223, 86);
 }
@@ -91,6 +95,7 @@ h2.point {
 }
 
 /* 比較用box */
+
 .box-large {
   width: 98%;
   height: auto;
@@ -151,6 +156,31 @@ h2.point {
     font-weight: normal;
     padding: 0 0 20px 0;
 }
+
+/* ダークモード */
+
+body.dark .box h3{
+    color: #d6d6d6;
+}
+
+body.dark .box p {
+    color: #d6d6d6;
+}
+
+body.dark .hikaku-box h2 {
+    color: #d6d6d6;
+}
+
+body.dark .hikaku-box p {
+    color: #d6d6d6;
+}
+
+body.dark h2.mean {
+    color: #ceb0ff;
+}
+
+
+
 
 
 @media (max-width: 600px) {
