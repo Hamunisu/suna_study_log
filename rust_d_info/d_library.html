@@ -8,7 +8,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Suna Rust | discord code</title>
+    <title>Suna Rust | library</title>
     <meta name="description" content="Sunamayu Rust log">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -42,16 +42,13 @@
 </head>
 
 <body>
-    <div id="goTop"></div>
 
-    <div class="top glass japanese" onclick="toggleDarkMode()">
-            <h1>Rust Study Log </h1>
-            <h2>coded by Suna</h2>
-    </div>
+<div class="top glass japanese" onclick="toggleDarkMode()">
+    <h1>Rust Study Log </h1>
+    <h2>coded by Suna</h2>
+</div>
 
-<!-- code解説 -->
-
-<h1 class="discord japanese">～discord コード解説～</h1>
+<h1 class="discord japanese">～discord ライブラリ解説～</h1>
 
 <p class="japanese" style="text-align: center; font-size: 22px; color: #888;">制作中です。戻るには<a href="../index.html">こちら</a>を押すか画面下部のロゴをタップ</p>
 
@@ -63,50 +60,38 @@
     
   <div class="container">
 
-    <div class="box glass">
-      <h2>static</h2>
-        <h3>実行中ずっと存在し、どこからでもアクセス可能な不変変数</h3>
-          <p>mutを使用できるが所有権移動が<span class="red_line">危険なため</span>使用しない方がよい</p>
+    <div class="box-med glass">
+      <h2 class="discord">use once_cell::sync::Lazy;</h2>
+        <h3>設定ファイルやトークンなどをはじめに一度だけ受け取るためのもの</h3>
+          <p>メモリに保存されるため何度でも呼び出し可能</p>
     </div>
 
     <div class="box-med glass">
-      <h2>Lazy</h2>
-        <h3>実行中ずっと存在し、呼び出された時に起動する
-          <br>staticとセットで使うことがある</h3>
-          <p>String::new()と違い、起動時に変数処理を行わないから起動が速くなる
-              <br><br>Lazyコードを通過したときに、メモリに枠だけ確保し、呼び出された時にLazyに問い合わせて内容を補完する。次回以降はその箱を参照する</p>
-    </div>
-    
-
-    <div class="box glass">
-      <h2>*(ディファレンス演算子)</h2>
-        <h3>ポインタや参照がさしている実際の値を取り出す</h3>
-          <p>例: *DEV_IDでDEV_IDが指す値を取り出す</p>
+      <h2 class="discord">use once_cell::sync::Lazy;</h2>
+        <h3>設定ファイルやトークンなどをはじめに一度だけ受け取るためのもの</h3>
+          <p>メモリに保存されるため何度でも呼び出し可能</p>
     </div>
 
 
 
+</div></div>
 
-
-
-    
-
-<!-- 最下部固定 -->
 
     <footer>
-        <p class="english">&copy; Sunamayu.</p>
-        <div class="gray japanese">
-            <p>本ページは個人によるRustプログラミング技術の習得を目的としています。</p>
-            <p>掲載しているプログラムの利用により生じた不具合や損害については、一切の責任を負いかねます。</p>
-        </div>
+      <p class="english">&copy; Sunamayu.</p>
+      <div class="gray japanese">
+          <p>本ページは個人によるRustプログラミング技術の習得を目的としています。</p>
+          <p>掲載しているプログラムの利用により生じた不具合や損害については、一切の責任を負いかねます。</p>
+      </div>
     </footer>
 
-    <header class="glass">
-        <div class="logo">
-            <a href="../index.html?v=1.4.0"><img src="../image/suna_Rust.png" alt="Suna_Rust logo" draggable="false"></a>
-        </div>
-    </header>
-    
+
+  <header class="glass">
+      <div class="logo">
+          <a href="../index.html?v=1.4.0"><img src="../image/suna_Rust.png" alt="Suna_Rust logo" draggable="false"></a>
+      </div>
+  </header>
+
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-rust.min.js"></script>

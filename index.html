@@ -14,9 +14,9 @@
 
     <!-- CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/modern-normalize@2.0.0/modern-normalize.min.css">
-    <link rel="stylesheet" href="css/style.css?v=1.3.0">
-    <link rel="stylesheet" href="css/rust.css?v=1.3.0">
-    <link rel="stylesheet" href="css/rust_all.css?v=1.3.0">
+    <link rel="stylesheet" href="css/style.css?v=1.4.0">
+    <link rel="stylesheet" href="css/rust.css?v=1.4.0">
+    <link rel="stylesheet" href="css/rust_all.css?v=1.4.0">
 
 
     <!-- ファビコン -->
@@ -69,6 +69,7 @@
             <a href="#d" class="discord">discord bot senerity</a>
                 <a href="rust_d_info/d_code.html">～コード解説～</a>
                 <a href="rust_d_info/d_term.html">～用語解説～</a>
+                <a href="rust_d_info/d_library.html">～ライブラリ解説～</a>
             </div>
 
 <!-- 内容 -->
@@ -443,25 +444,182 @@ fn main() {
 
 <section id="d">
     <div class="info glass">
-        <div class="title"><a class="discord" href="#goTop">discord bot senerity まとめパック</a></div>
+        <div class="title"><a class="discord" href="#goTop">discord bot senerity まとめパック(準備)</a></div>
             <div class="code-box">
             <pre><code class="language-rust">
-let token = env::var("DISCORD_TOKEN").expect("TOKEN not found");
+use once_cell::sync::Lazy;
+use std::env;
+use std::collections::HashMap;
+use std::time::{Duration, Instant};
+use serenity::{
+    async_trait,
+    model::{channel::Message, gateway::Ready},
+    prelude::*,
+};
+use serenity::model::id::UserId;
+use dotenv::dotenv;
+use tokio::sync::Mutex;
+use log::error;
+
+struct Handler {
+    cooldowns: Mutex< HashMap< UserId, Instant>>,
+}
+
+static DEV_ID: Lazy< u64> = Lazy::new(|| {
+    env::var("DEV_ID").expect("DEV_ID not set").parse().expect("DEV_ID must be a u64")
+});
+
+static CHANNEL_ID_1: Lazy< u64> = Lazy::new(|| {
+    env::var("CHANNEL_ID_1").expect("CHANNEL_ID_1 not set").parse().expect("CHANNEL_ID_1 must be a u64")
+});
+
+static CHANNEL_ID_2: Lazy< u64> = Lazy::new(|| {
+    env::var("CHANNEL_ID_2").expect("CHANNEL_ID_2 not set").parse().expect("CHANNEL_ID_2 must be a u64")
+});
+
+
+static TARGET_CHANNELS: Lazy< Vec< serenity::model::id::ChannelId>> = Lazy::new(|| {
+    vec![
+        serenity::model::id::ChannelId::from(*CHANNEL_ID_1),
+        serenity::model::id::ChannelId::from(*CHANNEL_ID_2),
+    ]
+});
+
+static MENTION: Lazy< String> = Lazy::new(|| format!("<@{}>", *DEV_ID));
+</code></pre></div></div>
+</section>
+
+<section id="d-1">
+    <div class="info glass">
+        <div class="title"><a class="discord" href="#goTop">discord bot senerity まとめパック(EventHandler)</a></div>
+            <div class="code-box">
+            <pre><code class="language-rust">
+#[async_trait]
+impl EventHandler for Handler {
+    async fn message(&self, ctx: Context, msg: Message) {
+
+        if !TARGET_CHANNELS.contains(&msg.channel_id) {
+            return;
+        }
+
+        if msg.author.bot {
+            return;
+        }
+
+        let user_id = msg.author.id;
+
+        {
+            let mut cooldowns = self.cooldowns.lock().await;
+
+            if let Some(&last_time) = cooldowns.get(&user_id) {
+                if last_time.elapsed() < Duration::from_secs(15) {
+                    return;
+                }
+            }cooldowns.insert(user_id, Instant::now());
+        }
+
+        let content = msg.content.to_lowercase();
+        match  content.as_str(){
+            "おはようございマングース" => {
+                let _ = msg.channel_id.say(&ctx.http, "おはようございマングース！\n一日頑張ろう！").await;
+                return;
+            },
+
+            "おやすみマングース" => {
+                let _ = msg.channel_id.say(&ctx.http, "おやすみマングース！\n良い夢を！").await;
+                return;
+            },
+
+            "おつかれさマングース" => {
+                let _ = msg.channel_id.say(&ctx.http, "おつかれさマングース！").await;
+                return;
+            },
+            _ => {}
+
+        }
+
+        if msg.content.contains("マングース") || msg.content.to_lowercase().contains("mongoose") {
+
+            let guild_id = match msg.guild_id {
+                Some(id) => id,
+                None => return,
+            };
+
+            let Ok(member) = guild_id.member(&ctx.http, msg.author.id).await else {
+                let err = format!("{}\nE0001: Failed to retrieve member. Please check logs.", *MENTION);
+                let _ = msg.channel_id.say(&ctx.http, err).await;
+                error!("E0001: Failed to get member: {}", msg.author.id);
+                return;
+            };
+
+            let role_name = "マングースは世界を救う";
+
+            let Ok(roles) = guild_id.roles(&ctx.http).await else {
+                let err_2 = format!("{}\nE0002: Failed to retrieve role list. Please check logs.", *MENTION);
+                let _ = msg.channel_id.say(&ctx.http, &err_2).await;
+                error!("E0002: Failed to retrieve role list for guild ID: {}", guild_id);
+                return;
+            };
+
+            let Some(role) = roles.values().find(|r| r.name == role_name) else {
+                let err_3 = format!("{}\nE0003: Role '{}' not found. Please check logs.", *MENTION, role_name);
+                let _ = msg.channel_id.say(&ctx.http, &err_3).await;
+                error!("E0003: Role '{}' not found", role_name);
+                return;
+            };
+
+            if !member.roles.contains(&role.id) {
+                if let Err(e) = member.add_role(&ctx.http, role.id).await {
+                    let err_4 = format!("{}\nE0004: Failed to assign role '{}'. Please check logs.", *MENTION, role_name);
+                    let _ = msg.channel_id.say(&ctx.http, &err_4).await;
+                    error!("E0004: Failed to assign role '{}'. User ID: {}. Error: {:?}",role_name, msg.author.id, e);
+                    return;
+                };
+                let _ = msg.channel_id.say(&ctx.http, "ロールをプレゼント！").await;
+            } else {
+                let _ = msg.channel_id.say(&ctx.http, "マングーース！").await;
+            }
+        }
+    }
+
+    async fn ready(&self, _: Context, ready: Ready) {
+        println!("{} login_complete", ready.user.name);
+    }
+}
+</code></pre></div></div>
+</section>
+
+<section id="d-2">
+    <div class="info glass">
+        <div class="title"><a class="discord" href="#goTop">discord bot senerity まとめパック(fn main)</a></div>
+            <div class="code-box">
+            <pre><code class="language-rust">
+#[tokio::main]
+async fn main() {
+    dotenv().ok();
+    env_logger::init();
+    let token = std::env::var("DISCORD_TOKEN").expect("token not found!");
     //.envに書いたトークンを呼び出すorエラー処理
+    use serenity::model::gateway::GatewayIntents;
 
-let intents = GatewayIntents::GUILD_MESSAGES | GatewayIntents::MESSAGE_CONTENT;
-    //intentsはdiscord APIに要求(GatewayIntents)する GUIILD_MESSSEGESはdiscordの送信、編集などのメッセージの動作、MESSEGE_CONTENTは内容を受け取る
+    let intents = GatewayIntents::GUILD_MESSAGES
+        | GatewayIntents::GUILD_MEMBERS
+        | GatewayIntents::MESSAGE_CONTENT;
 
-let mut client = Client::builder(&token, intents)
+    let handler = Handler {
+        cooldowns: Mutex::new(HashMap::new()),
+    };
+
+    let mut client = Client::builder(&token, intents)
     //clientはAPIとBOTの連携を開始するための動作（token intentsをAPIに渡す）
-    .event_handler(Handler)
+        .event_handler(handler)
         //senerityクレート内のClientBuilder構造体のもの Botがどういう動作をするかというのを（）内の
-    .await
-        //
-    .expect("Error creating client");
+        .await
+        .expect("Error creating client");
 
-if let Err(why) = client.start().await {
-    println!("Client error: {:?}", why);
+    if let Err(why) = client.start().await {
+        println!("Client Err: {:?}", why);
+    }
 }
 </code></pre></div></div>
 </section>
@@ -487,13 +645,13 @@ if let Err(why) = client.start().await {
 
     <header class="glass">
         <div class="logo">
-            <a href="html/w_hac.html?v=1.3.0"><img src="image/suna_Rust.png" alt="Suna_Rust logo" draggable="false"></a>
+            <a href="html/w_hac.html?v=1.4.0"><img src="image/suna_Rust.png" alt="Suna_Rust logo" draggable="false"></a>
         </div>
     </header>
 
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-rust.min.js"></script>
-    <script src="js/main.js?v=1.3.0"></script>
+    <script src="js/main.js?v=1.4.0"></script>
 </body>
 </html>

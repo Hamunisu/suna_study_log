@@ -27,6 +27,17 @@
 
 
 
+@media (max-width: 1300px) and (min-width: 601px) {
+    .all {
+        margin-bottom: 30%;
+        width: 90%;
+    }
+}
+
+
+
+
+
 @media (max-width: 600px) {
     .all {
         margin-bottom: 30%;

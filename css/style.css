@@ -258,13 +258,19 @@ body.dark footer {
 @media (max-width: 1300px) and (min-width: 601px) {
     html, body {
     overflow-x: hidden;
-    box-sizing: border-box;
     scroll-behavior: smooth;
   }
   
-
   .logo a {
     width: 10%;
+  }
+
+  .section-box  {
+      width: 98%;
+  }
+
+  .section-box a {
+    font-size: 25px;
   }
 }
 
