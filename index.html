@@ -613,7 +613,7 @@ async fn main() {
     let mut client = Client::builder(&token, intents)
     //clientはAPIとBOTの連携を開始するための動作（token intentsをAPIに渡す）
         .event_handler(handler)
-        //senerityクレート内のClientBuilder構造体のもの Botがどういう動作をするかというのを（）内の
+        //senerityクレート内のClientBuilder構造体のもの Botがどういう動作をするかというのを...
         .await
         .expect("Error creating client");
 

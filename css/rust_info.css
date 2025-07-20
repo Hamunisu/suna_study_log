@@ -265,7 +265,7 @@ body.dark h2.mean {
     .box-med {
         width: 90%;
         min-width: 0px;
-        height: 275px;
+        height: auto;
         margin: 1% 0;
     }
 }
@@ -319,7 +319,15 @@ body.dark h2.mean {
         font-size: 15px;
     }
 
+    .box-med h3 {
+        font-size: 15px;
+    }
+
     .box p {
+        font-size: 12px
+    }
+
+    .box-med p {
         font-size: 12px
     }
 

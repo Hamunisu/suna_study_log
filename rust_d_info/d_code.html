@@ -53,8 +53,6 @@
 
 <h1 class="discord japanese">～discord コード解説～</h1>
 
-<p class="japanese" style="text-align: center; font-size: 22px; color: #888;">制作中です。戻るには<a href="../index.html">こちら</a>を押すか画面下部のロゴをタップ</p>
-
 <!-- 内容コンテナ　フォント対応済み -->
 
 <div class="main-container japanese">
@@ -74,14 +72,30 @@
         <h3>実行中ずっと存在し、呼び出された時に起動する
           <br>staticとセットで使うことがある</h3>
           <p>String::new()と違い、起動時に変数処理を行わないから起動が速くなる
-              <br><br>Lazyコードを通過したときに、メモリに枠だけ確保し、呼び出された時にLazyに問い合わせて内容を補完する。次回以降はその箱を参照する</p>
+            <br>Lazyコードを通過したときに、メモリに枠だけ確保し、呼び出された時にLazyに問い合わせて内容を補完する。次回以降はその箱を参照する
+           <br><br>書き方: <span class="red_line">static 変数名: Lazy＜数値型＞ = Lazy(|| {必要な処理});</p>
     </div>
-    
 
     <div class="box glass">
       <h2>*(ディファレンス演算子)</h2>
         <h3>ポインタや参照がさしている実際の値を取り出す</h3>
           <p>例: *DEV_IDでDEV_IDが指す値を取り出す</p>
+    </div>
+
+    <div class="box glass">
+      <h2>env</h2>
+        <h3>environmentの略
+          <br>OSに登録されている情報をプログラムから読み取るための機能</h3>
+          <p>1つであれば自動で読み込まれる
+            <br>自動で読み込ませるには<a href="https://crates.io/crates/dotenv" target="_blank" rel="noopener noreferrer">dotenv</a>を.tomlに記載する必要あり</p>
+    </div>
+
+    <div class="box glass">
+      <h2>HashMap</h2>
+        <h3>定型文を作成するもの
+          <br>素材をまとめたりするのに使える</h3>
+          <p>ある意味jsonの代わりになるものである
+            <br>結果を表示する場所が必要である</p>
     </div>
 
 
