@@ -14,9 +14,9 @@
 
     <!-- CSS -->
     <link rel="stylesheet" href="https://unpkg.com/ress@5.0.2/dist/ress.min.css">
-    <link rel="stylesheet" href="../css/style.css?v=1.4.0">
-    <link rel="stylesheet" href="../css/rust_info.css?v=1.4.0">
-    <link rel="stylesheet" href="../css/rust_all.css?v=1.4.0">
+    <link rel="stylesheet" href="../css/style.css?v=1.4.2">
+    <link rel="stylesheet" href="../css/rust_info.css?v=1.4.2">
+    <link rel="stylesheet" href="../css/rust_all.css?v=1.4.2">
 
     <!-- ファビコン -->
     <link rel="icon" type="image/png" href="../image/r_favicon/favicon-96x96.png" sizes="96x96" />
@@ -208,8 +208,48 @@
       <div class="box glass">
         <h2 class="mean">文字リテラル</h2>
           <h3>ソースコードに直接書かれた文字列</h3>
-            <p></p>
       </div> 
+
+      <div class="box glass">
+        <h2 class="mean">文字列スライス</h2>
+          <h3></h3>
+      </div>
+
+      <div class="box-med glass">
+        <h2 class="mean">所有権</h2>
+          <h3>let x = String::from("Hello");　let y = x;</h3>
+            <p><br>String型は、スタック上にポインタ・長さ・容量を持ち、実際の文字列データはヒープに保存される。
+              <br>通常の代入（let y = x）ではスタックの情報だけがコピーされ、xとyが同じヒープ領域を指すことになる。
+              <br>このままだと、スコープ終了時に両方が同じ領域を解放し、<span class="red_line">二重解放エラーが起こる。</span>
+              <br>Rustは所有権システムにより、xからyへのムーブを行い、xを無効化することで、ヒープとスタックの所有者を一致させてメモリ安全を保証している。
+            </p>
+      </div> 
+
+      <!-- <div class="box glass">
+        <h2 class="mean"></h2>
+          <h3></h3>
+      </div> 
+
+
+      <div class="box glass">
+        <h2 class="mean"></h2>
+          <h3></h3>
+      </div> 
+
+      <div class="box glass">
+        <h2 class="mean"></h2>
+          <h3></h3>
+      </div> 
+
+      <div class="box glass">
+        <h2 class="mean"></h2>
+          <h3></h3>
+      </div> 
+
+      <div class="box glass">
+        <h2 class="mean"></h2>
+          <h3></h3>
+      </div>  -->
 
 
 
@@ -243,13 +283,13 @@
 
     <header class="glass">
         <div class="logo">
-            <a href="../index.html?v=1.4.0"><img src="../image/suna_Rust.png" alt="Suna_Rust logo" draggable="false"></a>
+            <a href="../index.html?v=1.4.2"><img src="../image/suna_Rust.png" alt="Suna_Rust logo" draggable="false"></a>
         </div>
     </header>
 
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-rust.min.js"></script>
-    <script src="../js/main.js?v=1.4.0"></script>
+    <script src="../js/main.js?v=1.4.2"></script>
 </body>
 </html>

@@ -112,7 +112,7 @@ h2.point {
     flex-direction: column;
     justify-content: center;
     width: 49%;
-    height: 350px;
+    height: auto;
     margin: 0.5% 0;
     padding: 16px;
     transition: transform 0.3s ease;

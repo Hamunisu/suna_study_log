@@ -14,9 +14,9 @@
 
     <!-- CSS -->
     <link rel="stylesheet" href="https://unpkg.com/ress@5.0.2/dist/ress.min.css">
-    <link rel="stylesheet" href="../css/style.css?v=1.4.0">
-    <link rel="stylesheet" href="../css/rust_info.css?v=1.4.0">
-    <link rel="stylesheet" href="../css/rust_all.css?v=1.4.0">
+    <link rel="stylesheet" href="../css/style.css?v=1.4.2">
+    <link rel="stylesheet" href="../css/rust_info.css?v=1.4.2">
+    <link rel="stylesheet" href="../css/rust_all.css?v=1.4.2">
 
     <!-- ファビコン -->
     <link rel="icon" type="image/png" href="../image/r_favicon/favicon-96x96.png" sizes="96x96" />
@@ -244,11 +244,18 @@
 
     <div class="box glass">
       <h2>&str</h2>
-        <h3>文字リテラル
-          <br>変更不可の軽くて速いもの</h3>
-          <p>" "(ダブルクォーテーション)で文字をくくるだけで自動でセットされる</p>
+        <h3>参照(見るだけ)そのため軽量で高速
+          <br>不変である</h3>
+          <p>文字列スライスと呼ばれる型</p>
     </div>
 
+    <div class="box glass">
+      <h2>.push_str("")</h2>
+        <h3>あとから既存のString型に文字を追加できる付属メゾット</h3>
+          <p>もとのStringがmutである必要がある
+            <br>&strのため借用して文字を追加している(所有権は移動していない)
+          </p>
+    </div>
 
 
 
@@ -280,13 +287,13 @@
 
   <header class="glass">
       <div class="logo">
-          <a href="../index.html?v=1.4.0"><img src="../image/suna_Rust.png" alt="Suna_Rust logo" draggable="false"></a>
+          <a href="../index.html?v=1.4.2"><img src="../image/suna_Rust.png" alt="Suna_Rust logo" draggable="false"></a>
       </div>
   </header>
 
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-rust.min.js"></script>
-    <script src="../js/main.js?v=1.4.0"></script>
+    <script src="../js/main.js?v=1.4.2"></script>
 </body>
 </html>
